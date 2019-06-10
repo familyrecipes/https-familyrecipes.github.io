@@ -9,7 +9,7 @@ class AuthApp extends Component {
     render() {
         const dom = this.renderDOM();
 
-        const header = new Header({ title: 'Sign Up for Pokechat' });
+        const header = new Header({ title: 'Sign Up for familycookbook' });
         const main = dom.querySelector('main');
         dom.insertBefore(header.render(), main);
 

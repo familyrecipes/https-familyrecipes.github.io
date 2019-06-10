@@ -1,25 +1,17 @@
 const config = {
-    apiKey: 'AIzaSyD0Ayv64PLWHXmd7BFeLHbXwS3cV1JbM1k',
-    authDomain: 'pokechat-79947.firebaseapp.com',
-    databaseURL: 'https://pokechat-79947.firebaseio.com',
-    projectId: 'pokechat-79947',
-    storageBucket: 'pokechat-79947.appspot.com',
-    messagingSenderId: '758093532128',
-    appId: '1:758093532128:web:0b79d36989a55d49'
+    apiKey: 'AIzaSyAI33Z8n8ZLws4sA-KL5X6GaW8zRX9p4uY',
+    authDomain: 'familyrecipes-d144f.firebaseapp.com',
+    databaseURL: 'https://familyrecipes-d144f.firebaseio.com',
+    projectId: 'familyrecipes-d144f',
+    storageBucket: 'familyrecipes-d144f.appspot.com',
+    messagingSenderId: '759581411685',
+    appId: '1:759581411685:web:3a3a4243b44afda7'
 };
 
-firebase.initializeApp(config);
+export const app = firebase.initializeApp(config);
+
 
 export const auth = firebase.auth();
 export const db = firebase.database();
 
-export const userFavoritesRef = db.ref('favoritesByUser');
-
-export const pokemonFavoritesRef = db.ref('favoritesByPokemon');
-
-export const gymsRef = db.ref('gyms');
-
 export const usersRef = db.ref('users');
-
-// play with the db in the console:
-// window.db = db;

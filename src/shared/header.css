@@ -1,0 +1,14 @@
+
+
+#header {
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(109, 185, 230);
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

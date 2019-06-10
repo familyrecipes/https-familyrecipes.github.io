@@ -15,3 +15,5 @@ export const auth = firebase.auth();
 export const db = firebase.database();
 
 export const usersRef = db.ref('users');
+export const allRecipesRef = db.ref('all-recipes');
+export const recipesByUserRef = db.ref('recipes-by-user');

@@ -1,5 +1,6 @@
 import Component from '../Component.js';
 import Profile from '../shared/Profile.js';
+import NavBar from './NavBar.js';
 import { auth } from '../services/firebase.js';
 
 class Header extends Component {
@@ -10,9 +11,13 @@ class Header extends Component {
         const profile = new Profile();
         dom.appendChild(profile.render());
 
+        const navBar = new NavBar();
+        dom.appendChild(navBar.render());
+
         auth.onAuthStateChanged(user => {
-            console.log(user);
             profile.update({ user });
+
+            navBar.update({ user });
         });
 
         return dom;

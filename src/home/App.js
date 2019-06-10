@@ -1,5 +1,6 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
+import { auth, usersRef } from '../services/firebase.js';
 
 class App extends Component {
 
@@ -9,8 +10,6 @@ class App extends Component {
 
         const header = new Header();
         dom.insertBefore(header.render(), main);
-
-
 
         return dom;
     }

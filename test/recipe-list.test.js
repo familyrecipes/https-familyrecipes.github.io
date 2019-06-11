@@ -5,19 +5,16 @@ QUnit.module('Recipe Item test');
 
 test('renders li', assert => {
     //arrange
+    const recipe = {
+        recipeTitle: 'I REIGN SUPREME'
+    };
 
-    const newRecipeItem = new RecipeItem({}); 
+    const newRecipeItem = new RecipeItem({ recipe }); 
 
     const expected = /*html*/ `
         <li>
             <a href="">
-                <h3>Bananas</h3>
-                <img src="">
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <h3>Apples</h3>
+                <h3>I REIGN SUPREME</h3>
                 <img src="">
             </a>
         </li>

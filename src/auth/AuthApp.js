@@ -44,7 +44,7 @@ class AuthApp extends Component {
         return /*html*/`
             <div>
                 <main>
-                    <p>Get signed in to use the favorite movie app!</p>
+                    <p>Get signed in to our Family Recipes App!</p>
                     <div id="firebaseui-auth-container">
                         <!--firebaseui auth will go here...-->
                     </div>

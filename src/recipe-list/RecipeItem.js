@@ -7,7 +7,7 @@ class RecipeItem extends Component {
         const recipe = this.props.recipe;
         return /*html*/ `
             <li>
-                <a href="">
+                <a href="./recipe-deets.html?key=${recipe.key}">
                 <h3>${recipe.recipeTitle}</h3>
                 <img src="">
                 </a>

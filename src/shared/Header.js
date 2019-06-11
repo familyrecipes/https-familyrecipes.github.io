@@ -10,13 +10,12 @@ class Header extends Component {
 
         const profile = new Profile();
         dom.appendChild(profile.render());
-
+        
         const navBar = new NavBar();
         dom.appendChild(navBar.render());
 
         auth.onAuthStateChanged(user => {
             profile.update({ user });
-
             navBar.update({ user });
         });
 
@@ -27,7 +26,7 @@ class Header extends Component {
         return /*html*/ `
             <div id="header">
                 <header>
-                    <h1>Hello from header component</h1>
+                    <h1>Hello from header component</h1>   
                 </header>
             </div>
         `;

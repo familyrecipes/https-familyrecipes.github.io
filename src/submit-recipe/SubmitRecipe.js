@@ -6,18 +6,18 @@ class SubmitRecipe extends Component {
     render() {
         const form = this.renderDOM();
 
-        //TODO: WHAT THE FUCK YALL
         const submitButton = form.querySelector('#submit-button');
+        console.log(this.props.key);
+        const recipeKey = recipesByUserRef.child(this.props.key);
 
         submitButton.addEventListener('click', event => {
             event.preventDefault();
             const formData = new FormData(form);
-            const recipeRef = recipesByUserRef.push();
+            const recipeRef = recipeKey.push();
 
             const newRecipe = {
                 key: recipeRef.key,
                 owner: auth.currentUser.uid,
-                
                 recipeTitle: formData.get('recipe-title'),
                 description: formData.get('description'),
                 prepTime: formData.get('prep-time'),
@@ -27,7 +27,7 @@ class SubmitRecipe extends Component {
                 ingredients: formData.get('ingredients')
             };
 
-            recipesByUserRef.set(newRecipe).then(() => {
+            recipeRef.set(newRecipe).then(() => {
                 form.reset();
                 
             });

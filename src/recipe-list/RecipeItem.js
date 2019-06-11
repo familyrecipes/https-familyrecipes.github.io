@@ -1,5 +1,5 @@
 import Component from '../Component.js';
-import { allRecipesRef, recipesByUserRef } from '../services/firebase.js';
+// import { allRecipesRef, recipesByUserRef } from '../services/firebase.js';
 
 class RecipeItem extends Component {
  

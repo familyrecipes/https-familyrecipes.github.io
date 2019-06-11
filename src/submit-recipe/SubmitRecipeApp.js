@@ -12,7 +12,7 @@ class SubmitRecipeApp extends Component {
         const header = new Header();
         dom.insertBefore(header.render(), main);
 
-        const keyRef = recipesByUserRef.push();
+        const keyRef = recipesByUserRef.child(auth.currentUser.uid);
 
         const submitRecipe = new SubmitRecipe({ key: keyRef.key });
         main.appendChild(submitRecipe.render());

@@ -6,7 +6,7 @@ QUnit.module('Recipe Item test');
 test('renders li', assert => {
     //arrange
 
-    const newRecipeItem = new RecipeItem ({}); 
+    const newRecipeItem = new RecipeItem({}); 
 
     const expected = /*html*/ `
         <li>

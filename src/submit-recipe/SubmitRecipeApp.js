@@ -22,7 +22,6 @@ class SubmitRecipeApp extends Component {
             .on('value', snapshot => {
                 const value = snapshot.val();
                 const userRecipes = value ? Object.values(value) : [];
-                console.log(userRecipes);
 
             });
 

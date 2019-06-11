@@ -1,7 +1,7 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import RecipeList from './RecipeList.js';
-import { recipesByUsersRef}
+import { recipesByUserRef } from '../services/firebase.js';
 
 class RecipeListApp extends Component {
     render() {
@@ -11,7 +11,14 @@ class RecipeListApp extends Component {
         const header = new Header();
         dom.insertBefore(header.render(), main);
 
-        const recipeList = new RecipeList();
+        recipesByUserRef
+            .on('value', snapshot => {
+                const value = snapshot.val();
+                const recipes = value ? Object.values(value) : [];
+                recipeList.update({ recipes: recipes });
+            });
+
+        const recipeList = new RecipeList({ recipes: [] });
         dom.appendChild(recipeList.render());
 
         return dom;

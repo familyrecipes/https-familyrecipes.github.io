@@ -1,6 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script&display=swap');
 /* TODO: FIX LATER */
+
+
 body {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Bad Script', cursive;
     font-size: 2em;
+    background-color: #EEECCB;
+    color: #353A45;
+    font-weight: bold;
 }

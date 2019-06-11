@@ -78,6 +78,7 @@ class SubmitRecipe extends Component {
                 <div>
                     <textarea name="instructions" placeholder="Instructions..."></textarea>
                     <textarea name="notes" placeholder="Notes..."></textarea>
+                    <input name="family-tag" placeholder="Family Name">
                 </div>
                 <div>
                 </div>

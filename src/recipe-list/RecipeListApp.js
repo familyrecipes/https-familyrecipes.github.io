@@ -15,7 +15,6 @@ class RecipeListApp extends Component {
 
         let toFilter = [];
         
-        //
         const recipeFilter = new RecipeFilter({ 
             onFilter:(filterValue) => {
                 const filterByDiet = toFilter.filter(recipe => {

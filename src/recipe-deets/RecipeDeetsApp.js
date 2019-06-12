@@ -18,7 +18,6 @@ class RecipeDeetsApp extends Component {
         const recipeRef = recipesByUserRef.child(URLParams.key);
 
         recipesByUserRef
-            // .child(auth.currentUser.uid)
             .on('value', snapshot => {
                 const value = snapshot.val();
                 const usersRecipes = value ? Object.values(value) : [];

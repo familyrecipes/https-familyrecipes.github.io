@@ -1,6 +1,5 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
-import { auth, usersRef } from '../services/firebase.js';
 
 class App extends Component {
 

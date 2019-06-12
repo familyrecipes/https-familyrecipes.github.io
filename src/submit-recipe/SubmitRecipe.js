@@ -47,45 +47,47 @@ class SubmitRecipe extends Component {
 
     renderTemplate() {
         return /*html*/ `
-            <form>
-                <div>
-                    <label><input name="recipe-title" placeholder="Recipe Title...">Recipe Title</label>
-                    <textarea name="description" placeholder="Describe your dish..."></textarea>
-                    <label><input name="image-upload" placeholder="image uplaod">image upload</label>
-                </div>
-                    <input id="breakfast" type="checkbox" name="breakfast" value="Breakfast">Breakfast
-                    <input id="lunch" type="checkbox" name="lunch" value="Lunch">Lunch
-                    <input id="dinner" type="checkbox" name="dinner" value="Dinner">Dinner
-                    <input id="dessert" type="checkbox" name="dessert" value="Dessert">Dessert
-                    <input id="side" type="checkbox" name="side" value="Side">Side
-                <div>
-                    <select id="diet-type" name="diet-type" >Diet Type
-                        <option disabled selected value> select an option below </option>
-                        <option value="Vegetarian">Vegetarian</option>
-                        <option value="Vegan">Vegan</option>
-                        <option value="Gluten-free">Gluten-free</option>
-                    </select>
-                </div>
-                <div>
-                    <input name="prep-time" placeholder="Prep time...">
-                    <input name="cook-time" placeholder="Cook time...">
-                    <input name="ready-in" placeholder="Ready in...">
-                    <input name="servings" placeholder="Servings...">
-                </div>
-                <div>
-                    <label>Ingredients
-                    <textarea name="ingredients" placeholder="1tbsp sugar, 3 cups flour..."></textarea>
-                    </label>
-                </div>
-                <div>
-                    <textarea name="instructions" placeholder="Instructions..."></textarea>
-                    <textarea name="notes" placeholder="Notes..."></textarea>
-                    <input name="family-tag" placeholder="Family Name">
-                </div>
-                <div>
-                </div>
-                <button id="submit-button">Add recipe</button>
-            </form>
+            <div id="container">
+                <form>
+                    <div>
+                        <label><input name="recipe-title" placeholder="Recipe Title...">Recipe Title</label>
+                        <textarea name="description" placeholder="Describe your dish..."></textarea>
+                        <label><input name="image-upload" placeholder="image uplaod">image upload</label>
+                    </div>
+                        <input id="breakfast" type="checkbox" name="breakfast" value="Breakfast">Breakfast
+                        <input id="lunch" type="checkbox" name="lunch" value="Lunch">Lunch
+                        <input id="dinner" type="checkbox" name="dinner" value="Dinner">Dinner
+                        <input id="dessert" type="checkbox" name="dessert" value="Dessert">Dessert
+                        <input id="side" type="checkbox" name="side" value="Side">Side
+                    <div>
+                        <select id="diet-type" name="diet-type" >Diet Type
+                            <option disabled selected value> select an option below </option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Vegan">Vegan</option>
+                            <option value="Gluten-free">Gluten-free</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input name="prep-time" placeholder="Prep time...">
+                        <input name="cook-time" placeholder="Cook time...">
+                        <input name="ready-in" placeholder="Ready in...">
+                        <input name="servings" placeholder="Servings...">
+                    </div>
+                    <div>
+                        <label>Ingredients
+                        <textarea name="ingredients" placeholder="1tbsp sugar, 3 cups flour..."></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <textarea name="instructions" placeholder="Instructions..."></textarea>
+                        <textarea name="notes" placeholder="Notes..."></textarea>
+                        <input name="family-tag" placeholder="Family Name">
+                    </div>
+                    <div>
+                    </div>
+                    <button id="submit-button">Add recipe</button>
+                </form>
+            </div>
     `;
     }
 }

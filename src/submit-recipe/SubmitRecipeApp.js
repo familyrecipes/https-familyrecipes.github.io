@@ -17,14 +17,6 @@ class SubmitRecipeApp extends Component {
         const submitRecipe = new SubmitRecipe({ key: keyRef.key });
         main.appendChild(submitRecipe.render());
 
-        recipesByUserRef
-            .child(auth.currentUser.uid)
-            .on('value', snapshot => {
-                const value = snapshot.val();
-                const userRecipes = value ? Object.values(value) : [];
-
-            });
-
         return dom;
     }
     renderTemplate() {

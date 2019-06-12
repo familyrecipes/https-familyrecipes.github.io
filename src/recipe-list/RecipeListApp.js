@@ -25,7 +25,6 @@ class RecipeListApp extends Component {
                 });
                 recipeList.update({ recipes: allRecipes });
             
-                console.log(allRecipes, 'all user values');
             });
 
         const recipeList = new RecipeList({ recipes: [] });

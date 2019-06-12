@@ -28,7 +28,8 @@ class SubmitRecipe extends Component {
                 lunch: formData.get('lunch'),
                 dinner: formData.get('dinner'),
                 dessert: formData.get('dessert'),
-                side: formData.get('side')
+                side: formData.get('side'),
+                instructions: formData.get('instructions')
 
             };
 
@@ -49,11 +50,11 @@ class SubmitRecipe extends Component {
                     <textarea name="description" placeholder="Describe your dish..."></textarea>
                     <label><input name="image-upload" placeholder="image uplaod">image upload</label>
                 </div>
-                    <input id="breakfast" type="checkbox" name="breakfast">Breakfast
-                    <input id="lunch" type="checkbox" name="lunch">Lunch
-                    <input id="dinner" type="checkbox" name="dinner">Dinner
-                    <input id="dessert" type="checkbox" name="dessert">Dessert
-                    <input id="side" type="checkbox" name="side">Side
+                    <input id="breakfast" type="checkbox" name="breakfast" value="Breakfast">Breakfast
+                    <input id="lunch" type="checkbox" name="lunch" value="Lunch">Lunch
+                    <input id="dinner" type="checkbox" name="dinner" value="Dinner">Dinner
+                    <input id="dessert" type="checkbox" name="dessert" value="Dessert">Dessert
+                    <input id="side" type="checkbox" name="side" value="Side">Side
                 <div>
                     <select>Diet Type
                         <option disabled selected value> select an option below </option>

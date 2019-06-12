@@ -13,9 +13,9 @@ test('renders li', assert => {
 
     const expected = /*html*/ `
         <li>
-            <a href="">
-                <h3>I REIGN SUPREME</h3>
-                <img src="">
+            <a href="./recipe-deets.html?key=${recipe.key}">
+            <h3>${recipe.recipeTitle}</h3>
+            <img src="">
             </a>
         </li>
     `;

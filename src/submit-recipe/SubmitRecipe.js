@@ -5,13 +5,14 @@ class SubmitRecipe extends Component {
 
     render() {
         const form = this.renderDOM();
+        const submitForm = form.querySelector('form');
 
         const submitButton = form.querySelector('#submit-button');
         const recipeKey = recipesByUserRef.child(this.props.key);
 
         submitButton.addEventListener('click', event => {
             event.preventDefault();
-            const formData = new FormData(form);
+            const formData = new FormData(submitForm);
             const recipeRef = recipeKey.push();
 
             const newRecipe = {
@@ -37,7 +38,7 @@ class SubmitRecipe extends Component {
             };
 
             recipeRef.set(newRecipe).then(() => {
-                form.reset();
+                submitForm.reset();
                 
             });
         });

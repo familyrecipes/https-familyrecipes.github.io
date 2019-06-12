@@ -1,6 +1,7 @@
 import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import RecipeList from './RecipeList.js';
+import RecipeFilter from './RecipeFilter.js';
 import { recipesByUserRef } from '../services/firebase.js';
 
 class RecipeListApp extends Component {
@@ -10,6 +11,21 @@ class RecipeListApp extends Component {
 
         const header = new Header();
         dom.insertBefore(header.render(), main);
+
+        let toFilter;
+
+        //
+        const recipeFilter = new RecipeFilter({ 
+            onFilter:(filterValue) => {
+                const filtered = toFilter.filter((recipe) => {
+                    return recipe.dietType.includes(filterValue);
+                });
+
+                recipeList.update({ recipes: filtered });
+            }
+        });
+
+        dom.appendChild(recipeFilter.render());
 
         recipesByUserRef
             // .child(auth.currentUser.uid)
@@ -23,8 +39,8 @@ class RecipeListApp extends Component {
                 mappedRecipes.forEach(recipes => {
                     allRecipes = allRecipes.concat(recipes);
                 });
+                toFilter = allRecipes;
                 recipeList.update({ recipes: allRecipes });
-            
             });
 
         const recipeList = new RecipeList({ recipes: [] });

@@ -25,11 +25,7 @@ class SubmitRecipe extends Component {
                 readyIn: formData.get('ready-in'),
                 servings: formData.get('servings'),
                 ingredients: formData.get('ingredients'),
-                breakfast: formData.get('breakfast'),
-                lunch: formData.get('lunch'),
-                dinner: formData.get('dinner'),
-                dessert: formData.get('dessert'),
-                side: formData.get('side'),
+                mealType: formData.get('meal-type'),
                 instructions: formData.get('instructions'),
                 notes: formData.get('notes'),
                 familyTag: formData.get('family-tag'),
@@ -55,13 +51,15 @@ class SubmitRecipe extends Component {
                         <textarea name="description" placeholder="Describe your dish..."></textarea>
                         <label><input name="image-upload" placeholder="image uplaod">image upload</label>
                     </div>
-                        <input id="breakfast" type="checkbox" name="breakfast" value="Breakfast">Breakfast
-                        <input id="lunch" type="checkbox" name="lunch" value="Lunch">Lunch
-                        <input id="dinner" type="checkbox" name="dinner" value="Dinner">Dinner
-                        <input id="dessert" type="checkbox" name="dessert" value="Dessert">Dessert
-                        <input id="side" type="checkbox" name="side" value="Side">Side
+                        <select id="meal-type" name="meal-type">Meal Type
+                            <option id="breakfast" value="Breakfast">Breakfast</option>
+                            <option id="lunch" value="Lunch">Lunch</option>
+                            <option id="dinner" value="Dinner">Dinner</option>
+                            <option id="dessert" value="Dessert">Dessert</option>
+                            <option id="side" value="Side">Side</option>
+                        </select>
                     <div>
-                        <select id="diet-type" name="diet-type" >Diet Type
+                        <select id="diet-type" name="diet-type">Diet Type
                             <option disabled selected value> select an option below </option>
                             <option value="Vegetarian">Vegetarian</option>
                             <option value="Vegan">Vegan</option>

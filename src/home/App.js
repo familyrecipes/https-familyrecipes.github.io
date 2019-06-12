@@ -17,7 +17,7 @@ class App extends Component {
         return /*html*/ `
             <div>
                 <main>
-                <p>Welcome to Family Recipes! Here you can browse heirloom recipes from families just like yours, view your favorite recipes, and most importantly: add recipes of your own!</p>
+                <p>Welcome to Cookbooks! Here you can browse heirloom recipes from families just like yours, view your favorite recipes, and most importantly: add recipes of your own!</p>
                 </main>
             </div>
     `;

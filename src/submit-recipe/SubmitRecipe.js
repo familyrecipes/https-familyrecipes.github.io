@@ -29,7 +29,10 @@ class SubmitRecipe extends Component {
                 dinner: formData.get('dinner'),
                 dessert: formData.get('dessert'),
                 side: formData.get('side'),
-                instructions: formData.get('instructions')
+                instructions: formData.get('instructions'),
+                notes: formData.get('notes'),
+                familyTag: formData.get('family-tag'),
+                dietType: formData.get('diet-type')
 
             };
 
@@ -56,11 +59,11 @@ class SubmitRecipe extends Component {
                     <input id="dessert" type="checkbox" name="dessert" value="Dessert">Dessert
                     <input id="side" type="checkbox" name="side" value="Side">Side
                 <div>
-                    <select>Diet Type
+                    <select id="diet-type" name="diet-type" >Diet Type
                         <option disabled selected value> select an option below </option>
-                        <option>Vegetarian</option>
-                        <option>Vegan</option>
-                        <option>Gluten-Free</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Gluten-free">Gluten-free</option>
                     </select>
                 </div>
                 <div>

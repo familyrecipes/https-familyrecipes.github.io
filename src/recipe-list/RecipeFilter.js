@@ -18,11 +18,6 @@ class RecipeFilter extends Component {
             onFilter(filters);
         });
 
-        // form.addEventListener('input', () => {
-        //     onFilter(mealFilterValue);
-        //     console.log(mealFilterValue, 'mealfilter');
-        // });
-        
         return dom;
 
     }

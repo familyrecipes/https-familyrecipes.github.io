@@ -39,27 +39,30 @@ class SubmitRecipe extends Component {
 
     renderTemplate() {
         return /*html*/ `
-            <form>
-                <div>
-                    <label><input name="recipe-title" placeholder="Recipe Title...">Recipe Title</label>
-                    <textarea name="description" placeholder="Describe your dish..."></textarea>
-                    <label><input name="image-upload" placeholder="image uplaod">image upload</label>
-                </div>
-                <div>
-                    <input name="prep-time" placeholder="Prep time...">
-                    <input name="cook-time" placeholder="Cook time...">
-                    <input name="ready-in" placeholder="Ready in...">
-                    <input name="servings" placeholder="Servings...">
-                </div>
-                <div>
-                    <textarea name="ingredients"></textarea>
-                </div>
-                <div>
-                    <textarea name="instructions" placeholder="Instructions..."></textarea>
-                    <textarea name="notes" placeholder="Notes..."></textarea>
-                </div>
-                <button id="submit-button">Add recipe</button>
-            </form>
+            <div id="container">
+                <form>
+                        <div id="title-and-input">
+                            <label>Recipe Title<input name="recipe-title" placeholder="Recipe Title..."></label>
+                            <label>Upload Image<input name="image-upload" placeholder="image uplaod"></label>
+                        </div>
+                        <div id="time">
+                            <input name="prep-time" placeholder="Prep time...">
+                            <input name="cook-time" placeholder="Cook time...">
+                            <input name="ready-in" placeholder="Ready in...">
+                            <input name="servings" placeholder="Servings...">
+                        </div>
+                        <div id="ingredients">
+                            <textarea name="ingredients" placeholder="Ingredients..."></textarea>
+                        </div>
+                        <div id="instructions">
+                            <textarea name="instructions" placeholder="Instructions..."></textarea>
+                        </div>
+                        <div id="notes">
+                            <textarea name="notes" placeholder="Notes..."></textarea>
+                        </div>
+                        <button id="submit-button">Add recipe</button>
+                    </form>
+            </div> 
     `;
     }
 }

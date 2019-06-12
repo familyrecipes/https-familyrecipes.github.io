@@ -20,15 +20,9 @@ class RecipeDeets extends Component {
                 <p>${recipe.ingredients}</p>
                 <p>${recipe.instructions}</p>
                 <p>${recipe.notes}</p>
-                <p>${recipe.breakfast ? recipe.breakfast : ''}</p>
-                <p>${recipe.lunch ? recipe.lunch : ''}</p>
-                <p>${recipe.dinner ? recipe.dinner : ''}</p>
-                <p>${recipe.dessert ? recipe.dessert : ''}</p>
-                <p>${recipe.side ? recipe.side : ''}</p>
+                <p>${recipe.mealType}</p>
                 <p>${recipe.familyTag}</p>
                 <p>${recipe.dietType}</p>
-                
-
 
             </div>
         `;

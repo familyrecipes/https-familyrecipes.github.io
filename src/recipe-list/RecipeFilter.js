@@ -12,9 +12,15 @@ class RecipeFilter extends Component {
 
         //add an event listener onto our dropdown
         form.addEventListener('input', () => {
-            const filterValue = form.elements['filter'].value;
-            onFilter(filterValue);
+            const dietFilterValue = form.elements['diet-type-filter'].value;
+            onFilter(dietFilterValue);
+            console.log(dietFilterValue, 'dietfilter');
+        });
 
+        form.addEventListener('input', () => {
+            const mealFilterValue = form.elements['meal-type-filter'].value;
+            onFilter(mealFilterValue);
+            console.log(mealFilterValue, 'mealfilter');
         });
         
         return dom;
@@ -25,12 +31,16 @@ class RecipeFilter extends Component {
         return /*html*/`
         <section>
             <form>
-                <select id="filter" name="filter" >Filter Your Search
-                    <option disabled selected value> select a filter below </option>
+                <select id="diet-type-filter" name="diet-type-filter" >Filter Your Search
+                    <option disabled selected value> select a filter for diet type below </option>
                     <option value="All">All</option>
                     <option value="Vegetarian">Vegetarian</option>
                     <option value="Vegan">Vegan</option>
                     <option value="Gluten-free">Gluten-free</option>
+                </select>
+                <select id="meal-type-filter" name="meal-type-filter" >Filter Your Search
+                    <option disabled selected value> select a filter for meal type below </option>
+                    <option value="All">All</option>
                     <option value="Breakfast">Breakfast</option>
                     <option value="Lunch">Lunch</option>
                     <option value="Dinner">Dinner</option>

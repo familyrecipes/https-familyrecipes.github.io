@@ -19,7 +19,8 @@ class RecipeListApp extends Component {
         const recipeFilter = new RecipeFilter({ 
             onFilter:(filterValue) => {
                 const filtered = toFilter.filter((recipe) => {
-                    return recipe.dietType.includes(filterValue);
+                    // return recipe.dietType.includes(filterValue);
+                    return recipe.dietType.includes(filterValue) || recipe.mealType.includes(filterValue);
                 });
 
                 recipeList.update({ recipes: filtered });

@@ -5,23 +5,23 @@ class RecipeFilter extends Component {
     render() {
         const dom = this.renderDOM();
 
-        //
         const onFilter = this.props.onFilter;
         
         const form = dom.querySelector('form');
 
-        //add an event listener onto our dropdown
         form.addEventListener('input', () => {
             const dietFilterValue = form.elements['diet-type-filter'].value;
-            onFilter(dietFilterValue);
-            console.log(dietFilterValue, 'dietfilter');
+            const mealFilterValue = form.elements['meal-type-filter'].value;
+            let filters = ['', ''];
+            filters[0] = dietFilterValue; 
+            filters[1] = mealFilterValue;
+            onFilter(filters);
         });
 
-        form.addEventListener('input', () => {
-            const mealFilterValue = form.elements['meal-type-filter'].value;
-            onFilter(mealFilterValue);
-            console.log(mealFilterValue, 'mealfilter');
-        });
+        // form.addEventListener('input', () => {
+        //     onFilter(mealFilterValue);
+        //     console.log(mealFilterValue, 'mealfilter');
+        // });
         
         return dom;
 

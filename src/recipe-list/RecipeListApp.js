@@ -13,16 +13,18 @@ class RecipeListApp extends Component {
         const header = new Header();
         dom.insertBefore(header.render(), main);
 
-        let toFilter;
-
+        let toFilter = [];
+        
         //
         const recipeFilter = new RecipeFilter({ 
             onFilter:(filterValue) => {
-                const filtered = toFilter.filter((recipe) => {
-                    // return recipe.dietType.includes(filterValue);
-                    return recipe.dietType.includes(filterValue) || recipe.mealType.includes(filterValue);
+                const filterByDiet = toFilter.filter(recipe => {
+                    return recipe.dietType.includes(filterValue[0]);
                 });
-
+                const filtered = filterByDiet.filter(recipe => {
+                    return recipe.mealType.includes(filterValue[1]);
+                });
+                
                 recipeList.update({ recipes: filtered });
             }
         });

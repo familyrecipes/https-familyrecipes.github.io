@@ -7,6 +7,7 @@ class RecipeList extends Component {
         const dom = this.renderDOM();
 
         const recipes = this.props.recipes;
+        console.log(recipes);
         recipes.forEach(recipe => {
             const recipeItem = new RecipeItem({ recipe });
             dom.appendChild(recipeItem.render());

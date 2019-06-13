@@ -21,7 +21,7 @@ class RecipeDeets extends Component {
                 <p>${recipe.instructions}</p>
                 <p>${recipe.notes}</p>
                 <p>${recipe.mealType}</p>
-                <p>${recipe.familyTag}</p>
+                <p>${recipe.cookbookTag}</p>
                 <p>${recipe.dietType}</p>
 
             </div>

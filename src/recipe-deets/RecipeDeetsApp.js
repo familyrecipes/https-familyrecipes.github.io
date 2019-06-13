@@ -30,6 +30,7 @@ class RecipeDeetsApp extends Component {
                 });
                 const oneTrueRecipe = allRecipes.filter(recipe => {
                     return recipe.key.includes(URLParams.key);
+            
                 });
                 recipeDeets.update({ recipe: oneTrueRecipe[0] });
             

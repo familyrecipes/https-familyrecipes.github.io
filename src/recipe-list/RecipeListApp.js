@@ -57,7 +57,7 @@ class RecipeListApp extends Component {
             const searchParams = new URLSearchParams(params);
             const search = searchParams.get('search');
             const searchArray = allRecipes.filter(recipe => {
-                return recipe.recipeTitle.includes(search);
+                return recipe.recipeTitle.toLowerCase().includes(search);
             });
             recipeList.update({ recipes: searchArray });
         }

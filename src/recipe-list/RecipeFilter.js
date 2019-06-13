@@ -28,14 +28,14 @@ class RecipeFilter extends Component {
             <form>
                 <select id="diet-type-filter" name="diet-type-filter" >Filter Your Search
                     <option disabled selected value> select a filter for diet type below </option>
-                    <option value="All">All</option>
+                    <option value="">All</option>
                     <option value="Vegetarian">Vegetarian</option>
                     <option value="Vegan">Vegan</option>
                     <option value="Gluten-free">Gluten-free</option>
                 </select>
                 <select id="meal-type-filter" name="meal-type-filter" >Filter Your Search
                     <option disabled selected value> select a filter for meal type below </option>
-                    <option value="All">All</option>
+                    <option value="">All</option>
                     <option value="Breakfast">Breakfast</option>
                     <option value="Lunch">Lunch</option>
                     <option value="Dinner">Dinner</option>

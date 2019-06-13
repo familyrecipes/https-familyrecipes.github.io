@@ -1,4 +1,4 @@
-#container {
+/* #container {
     display: flex;
     justify-content: center;
 }
@@ -59,4 +59,23 @@
     justify-content: center;
     margin-left: 45%;
     width: 100px;
+} */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin-right: 40%;
+    margin-left: 43%;
+    /* border: 2px solid black; */
+
+}
+label {
+    font-size: .6em;
+} 
+
+input {
+    border: 1px solid black;
+    border-radius: 5px;
 }

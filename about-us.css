@@ -21,6 +21,10 @@ body {
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.13);
 }
 
+.profile {
+    color: black;
+}
+
 img {
     margin-top: 10px;
     height: 150px;

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Poiret+One&display=swap');
+
+body {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.6em;
+}
+
+.top-people {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+}
+
+.top-people > div {
+    width: 45%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.13);
+}
+
+.profile {
+    color: black;
+}
+
+img {
+    margin-top: 10px;
+    height: 150px;
+}
+
+img :last-child {
+    width: 90px;
+}
+
+#back > a {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 2.3em;
+}

@@ -18,7 +18,7 @@ class RecipeList extends Component {
 
     renderTemplate() {
         return /*html*/ `
-        <div>
+        <div id="list-container">
             <ul id="recipe-list">
             </ul> 
         </div>

@@ -7,20 +7,13 @@ class Search extends Component {
         const input = form.querySelector('input');
 
         form.addEventListener('submit', event => {
-            // const formData = new FormData(form);
             event.preventDefault();
-            // if(searchParams) {
-            //     hashStorage.set({ [search]: searchParams });
-            // } else {
-            //     hashStorage.remove(query);
-            // }
             const searchParams = new URLSearchParams();
             searchParams.set('search', input.value.toLowerCase());
             window.location.hash = searchParams.toString();
             
         });
 
-        //TODO: figure out how to populate search bar with nav bar contents
         function setInputFromHash() {
             const params = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(params);
@@ -38,7 +31,6 @@ class Search extends Component {
         window.addEventListener('hashchange', () => {
             setInputFromHash();
         });
-
 
         return form;
     }

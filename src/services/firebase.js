@@ -8,16 +8,16 @@ const config = {
     appId: '1:759581411685:web:3a3a4243b44afda7'
 };
 
-export const app = firebase.initializeApp(config);
-
+const app = firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const db = firebase.database();
+export const storage = firebase.storage();
 
 export const usersRef = db.ref('users');
 export const allRecipesRef = db.ref('all-recipes');
 export const recipesByUserRef = db.ref('recipes-by-user');
 export const userFavoritesRef = db.ref('user-favorites');
-
-export const storage = firebase.storage();
 export const imageStorageRef = storage.ref('images');
+
+export default app;

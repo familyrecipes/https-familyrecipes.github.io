@@ -1,4 +1,8 @@
+import app from '../src/services/firebase.js';
 import './html-equal.js';
 import './Profile.test.js';
 import './recipe-list.test.js';
-// import utilities and custom assertions
+
+QUnit.done(() => {
+    app.delete();
+});

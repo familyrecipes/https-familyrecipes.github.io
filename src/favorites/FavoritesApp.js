@@ -5,7 +5,6 @@ import { auth, userFavoritesRef } from '../services/firebase.js';
 
 class FavoritesApp extends Component {
 
-    //TODO: add render, render component, etc.
     render() {
         const dom = this.renderDOM();
         const main = dom.querySelector('main');

@@ -1,5 +1,5 @@
 import Component from '../Component.js';
-import { auth, recipesByUserRef } from '../services/firebase.js';
+import { auth, recipesByUserRef, imageStorageRef } from '../services/firebase.js';
 
 class SubmitRecipe extends Component {
 
@@ -9,34 +9,53 @@ class SubmitRecipe extends Component {
 
         const submitButton = form.querySelector('#submit-button');
         const recipeKey = recipesByUserRef.child(this.props.key);
-
+        
         submitButton.addEventListener('click', event => {
             event.preventDefault();
             const formData = new FormData(submitForm);
+            const file = formData.get('image');
             const recipeRef = recipeKey.push();
+            const ingredients = formData.get('ingredients').split('\r\n');
+            const instructions = formData.get('instructions').split('\r\n');
 
-            const newRecipe = {
-                key: recipeRef.key,
-                owner: auth.currentUser.uid,
-                recipeTitle: formData.get('recipe-title'),
-                description: formData.get('description'),
-                prepTime: formData.get('prep-time'),
-                cookTime: formData.get('cook-time'),
-                readyIn: formData.get('ready-in'),
-                servings: formData.get('servings'),
-                ingredients: formData.get('ingredients'),
-                mealType: formData.get('meal-type'),
-                instructions: formData.get('instructions'),
-                notes: formData.get('notes'),
-                cookbookTag: formData.get('cookbook-tag'),
-                dietType: formData.get('diet-type')
-
-            };
-
-            recipeRef.set(newRecipe).then(() => {
-                submitForm.reset();
+            if(file.size === 0) {
+                saveRecipe();
+            }
+            else {
+                imageStorageRef.child(recipeRef.key).put(file)
+                    .then(snapshot => {
+                        return snapshot.ref.getDownloadURL();
+                    })
+                    .then(url => {
+                        saveRecipe(url);
+                    });
+            }
+            
+            function saveRecipe(url) {
                 
-            });
+                const newRecipe = {
+                    key: recipeRef.key,
+                    owner: auth.currentUser.uid,
+                    recipeTitle: formData.get('recipe-title'),
+                    prepTime: formData.get('prep-time'),
+                    cookTime: formData.get('cook-time'),
+                    readyIn: formData.get('ready-in'),
+                    servings: formData.get('servings'),
+                    ingredients: ingredients,
+                    mealType: formData.get('meal-type'),
+                    instructions: instructions,
+                    notes: formData.get('notes'),
+                    cookbookTag: formData.get('cookbook-tag'),
+                    dietType: formData.get('diet-type'),
+                    imageURL: url || null
+
+                };
+
+                recipeRef.set(newRecipe).then(() => {
+                    submitForm.reset();
+                
+                });
+            }
         });
 
         return form;
@@ -48,7 +67,7 @@ class SubmitRecipe extends Component {
                 <form>
                     <div>
                         <label><input required name="recipe-title" placeholder="Recipe Title...">Recipe Title</label>
-                        <label><input name="image-upload" placeholder="image uplaod">image upload</label>
+                        <label><input type="file" accept="image/*" name="image" placeholder="image uplaod">image upload</label>
                     </div>
                         <select required id="meal-type" name="meal-type">Meal Type
                             <option id="breakfast" value="Breakfast">Breakfast</option>

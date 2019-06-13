@@ -2,4 +2,15 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  
+}
+
+a {
+    text-shadow: 0 0 10px black;
+}
+
+p {
+    font-size: 1.3em;
+    color: white;
+    text-shadow: 0 0 20px black;
 }

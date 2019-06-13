@@ -1,8 +1,24 @@
+.profile {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    color: white;
+    text-shadow: 4px 3px 3px black;
+    font-size: 1.3em;
+}
+
 img {
+    display: flex;
     border-radius: 100%;
     margin-top: 20px;
 }
 
-.profile {
-    color: white;
+.profile button {
+    background:url('/assets/out-sign.png') no-repeat center;
+    background-color: rgba(255, 255, 255, 0.603);
+    border: none;
+    width: 45px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 18px; 
 }

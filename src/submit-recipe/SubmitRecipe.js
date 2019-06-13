@@ -28,7 +28,7 @@ class SubmitRecipe extends Component {
                 mealType: formData.get('meal-type'),
                 instructions: formData.get('instructions'),
                 notes: formData.get('notes'),
-                familyTag: formData.get('family-tag'),
+                cookbookTag: formData.get('cookbook-tag'),
                 dietType: formData.get('diet-type')
 
             };
@@ -47,11 +47,10 @@ class SubmitRecipe extends Component {
             <div id="container">
                 <form>
                     <div>
-                        <label><input name="recipe-title" placeholder="Recipe Title...">Recipe Title</label>
-                        <textarea name="description" placeholder="Describe your dish..."></textarea>
+                        <label><input required name="recipe-title" placeholder="Recipe Title...">Recipe Title</label>
                         <label><input name="image-upload" placeholder="image uplaod">image upload</label>
                     </div>
-                        <select id="meal-type" name="meal-type">Meal Type
+                        <select required id="meal-type" name="meal-type">Meal Type
                             <option id="breakfast" value="Breakfast">Breakfast</option>
                             <option id="lunch" value="Lunch">Lunch</option>
                             <option id="dinner" value="Dinner">Dinner</option>
@@ -74,13 +73,13 @@ class SubmitRecipe extends Component {
                     </div>
                     <div>
                         <label>Ingredients
-                        <textarea name="ingredients" placeholder="1tbsp sugar, 3 cups flour..."></textarea>
+                        <textarea required name="ingredients" placeholder="1tbsp sugar, 3 cups flour..."></textarea>
                         </label>
                     </div>
                     <div>
-                        <textarea name="instructions" placeholder="Instructions..."></textarea>
+                        <textarea required name="instructions" placeholder="Instructions..."></textarea>
                         <textarea name="notes" placeholder="Notes..."></textarea>
-                        <input name="family-tag" placeholder="Family Name">
+                        <input required name="cookbook-tag" placeholder="Cookbook Name">
                     </div>
                     <div>
                     </div>

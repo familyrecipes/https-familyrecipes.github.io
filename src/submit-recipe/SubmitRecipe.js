@@ -66,10 +66,13 @@ class SubmitRecipe extends Component {
             <div id="container">
                 <form>
                     <div>
-                        <label><input required name="recipe-title" placeholder="Recipe Title...">Recipe Title</label>
-                        <label><input type="file" accept="image/*" name="image" placeholder="image uplaod">image upload</label>
+                        <label>Recipe Title: <input required name="recipe-title" placeholder="Recipe Title..."></label>
+                    </div>
+                    <div>
+                        <label>Image upload: <input type="file" accept="image/*" name="image" placeholder="image uplaod"></label>
                     </div>
                         <select required id="meal-type" name="meal-type">Meal Type
+                        <option disabled selected value> select meal type below </option>
                             <option id="breakfast" value="Breakfast">Breakfast</option>
                             <option id="lunch" value="Lunch">Lunch</option>
                             <option id="dinner" value="Dinner">Dinner</option>
@@ -78,7 +81,7 @@ class SubmitRecipe extends Component {
                         </select>
                     <div>
                         <select id="diet-type" name="diet-type">Diet Type
-                            <option disabled selected value> select an option below </option>
+                            <option disabled selected value> select diet type below </option>
                             <option value="Vegetarian">Vegetarian</option>
                             <option value="Vegan">Vegan</option>
                             <option value="Gluten-free">Gluten-free</option>

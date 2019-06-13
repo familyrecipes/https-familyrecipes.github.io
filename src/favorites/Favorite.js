@@ -4,19 +4,19 @@ import Component from '../Component.js';
 class FavoritesApp extends Component {
     
     render() {
-        const button = this.renderDOM();
-        button.addEventListener('click', () => {
+        const image = this.renderDOM();
+        image.addEventListener('click', () => {
             this.props.onFavorite(!this.props.isFavorite);
         });
 
-        return button;
+        return image;
     }
 
     renderTemplate() {
         const isFavorite = this.props.isFavorite;
-        const star = isFavorite ? '❤' : '🍲';
+        const fave = isFavorite ? './../assets/fave.png' : './../assets/not-fave.png';
         return /*html*/ ` 
-            <button class="favorite-star ${isFavorite ? 'favorite' : ''}">${star}</button>
+            <img src="${fave}">
         `;
     }
 }

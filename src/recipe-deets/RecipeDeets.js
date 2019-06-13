@@ -4,11 +4,22 @@ class RecipeDeets extends Component {
 
     renderTemplate() {
         const recipe = this.props.recipe;
-
+        console.log(recipe);
         if(!recipe) {
             return `<div></div>`;
         }
         const image = recipe.imageURL || './assets/placeholder.png';
+        const ingredients = recipe.ingredients.map(ingredient => {
+            return `<li>${ingredient}</li>`;
+        }).join(' ');
+
+        const instructions = recipe.instructions.map(instruction => {
+            return `<li>${instruction}</li>`;
+        }).join(' ');
+
+        // const ingredientsList = new IngredientsList();
+        // dom.appendChild(ingredientsList.render());
+
         
         
         return /*html*/`
@@ -19,8 +30,8 @@ class RecipeDeets extends Component {
                 <p>${recipe.cookTime}</p>
                 <p>${recipe.readyIn}</p>
                 <p>${recipe.servings}</p>
-                <p>${recipe.ingredients}</p>
-                <p>${recipe.instructions}</p>
+                <ul>${ingredients}</ul>
+                <ol>${instructions}</ol>
                 <p>${recipe.notes}</p>
                 <p>${recipe.mealType}</p>
                 <p>${recipe.cookbookTag}</p>

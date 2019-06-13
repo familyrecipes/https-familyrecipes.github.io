@@ -18,3 +18,6 @@ export const usersRef = db.ref('users');
 export const allRecipesRef = db.ref('all-recipes');
 export const recipesByUserRef = db.ref('recipes-by-user');
 export const userFavoritesRef = db.ref('user-favorites');
+
+export const storage = firebase.storage();
+export const imageStorageRef = storage.ref('images');

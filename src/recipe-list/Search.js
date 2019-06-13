@@ -14,7 +14,6 @@ class Search extends Component {
             
         });
 
-        //TODO: figure out how to populate search bar with nav bar contents
         function setInputFromHash() {
             const params = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(params);
@@ -32,7 +31,6 @@ class Search extends Component {
         window.addEventListener('hashchange', () => {
             setInputFromHash();
         });
-
 
         return form;
     }

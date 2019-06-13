@@ -14,19 +14,12 @@ class RecipeListApp extends Component {
         const header = new Header();
         dom.insertBefore(header.render(), main);
 
-        // let toFilter = [];
         let allRecipes = [];
         let searchTerm;
         let filterTerm;
         
         const recipeFilter = new RecipeFilter({ 
             onFilter:(filterValue) => {
-                // const filterByDiet = allRecipes.filter(recipe => {
-                //     return recipe.dietType.includes(filterValue[0]);
-                // });
-                // const filtered = filterByDiet.filter(recipe => {
-                //     return recipe.mealType.includes(filterValue[1]);
-                // });
                 filterTerm = filterValue;
                 const filtered = searchAndFilter(searchTerm, filterValue, allRecipes);
                 
@@ -40,7 +33,6 @@ class RecipeListApp extends Component {
         dom.appendChild(search.render());
 
         recipesByUserRef
-            // .child(auth.currentUser.uid)
             .on('value', snapshot => {
                 const value = snapshot.val();
                 const usersRecipes = value ? Object.values(value) : [];

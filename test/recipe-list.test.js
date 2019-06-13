@@ -12,16 +12,18 @@ test('renders li', assert => {
     const newRecipeItem = new RecipeItem({ recipe }); 
 
     const expected = /*html*/ `
-    <li> 
-    <div class="favorite-container"></div> 
-    <a href="./recipe-deets.html?key=undefined"> 
-    <h3>I REIGN SUPREME</h3> 
-    <img src=""> </a> 
-    </li>
+        <li> 
+            <div class="favorite-container"></div> 
+            <a href="./recipe-deets.html?key=undefined"> 
+                <h3>I REIGN SUPREME</h3> 
+                <img src="">
+            </a>
+        </li>
     `;
 
     //act
     const rendered = newRecipeItem.renderTemplate();
+
     //assert
     assert.htmlEqual(rendered, expected);
 });

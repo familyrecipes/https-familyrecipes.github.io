@@ -21,9 +21,9 @@ test('renders profile with full user props', assert => {
         </div>
     `;
 
-        
     //act
     const rendered = profile.renderTemplate();
+    
     //assert
     assert.htmlEqual(rendered, expected);
 });

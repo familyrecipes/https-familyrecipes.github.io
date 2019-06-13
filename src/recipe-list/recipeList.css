@@ -9,7 +9,7 @@ li {
     border-radius: 20px;
     width: 30%;
     box-shadow: 0 0 10px rgb(29, 2, 2);
-    /* margin: 30px; */
+    margin: 10px;
 }
 
 #list-container{

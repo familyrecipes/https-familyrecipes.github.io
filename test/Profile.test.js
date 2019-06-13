@@ -17,13 +17,13 @@ test('renders profile with full user props', assert => {
         <div class="profile">
             <img src="../assets/default-avatar.png">
             <span>Name</span>
-            <button>Sign Out</button>
+            <button></button>
         </div>
     `;
 
     //act
     const rendered = profile.renderTemplate();
-    
+
     //assert
     assert.htmlEqual(rendered, expected);
 });

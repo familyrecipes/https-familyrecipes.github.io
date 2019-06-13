@@ -16,7 +16,8 @@ class SubmitRecipe extends Component {
             const file = formData.get('image');
             const recipeRef = recipeKey.push();
             const ingredients = formData.get('ingredients').split('\r\n');
-            
+            const instructions = formData.get('instructions').split('\r\n');
+
             if(file.size === 0) {
                 saveRecipe();
             }
@@ -42,7 +43,7 @@ class SubmitRecipe extends Component {
                     servings: formData.get('servings'),
                     ingredients: ingredients,
                     mealType: formData.get('meal-type'),
-                    instructions: formData.get('instructions'),
+                    instructions: instructions,
                     notes: formData.get('notes'),
                     cookbookTag: formData.get('cookbook-tag'),
                     dietType: formData.get('diet-type'),

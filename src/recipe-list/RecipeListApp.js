@@ -18,10 +18,10 @@ class RecipeListApp extends Component {
         const recipeFilter = new RecipeFilter({ 
             onFilter:(filterValue) => {
                 const filterByDiet = toFilter.filter(recipe => {
-                    return recipe.dietType.includes(filterValue[0]);
+                    return recipe.dietType.toLowerCase().includes(filterValue[0]);
                 });
                 const filtered = filterByDiet.filter(recipe => {
-                    return recipe.mealType.includes(filterValue[1]);
+                    return recipe.mealType.toLowerCase().includes(filterValue[1]);
                 });
                 
                 recipeList.update({ recipes: filtered });
@@ -57,7 +57,7 @@ class RecipeListApp extends Component {
             const searchParams = new URLSearchParams(params);
             const search = searchParams.get('search');
             const searchArray = allRecipes.filter(recipe => {
-                return recipe.recipeTitle.includes(search);
+                return recipe.recipeTitle.toLowerCase().includes(search);
             });
             recipeList.update({ recipes: searchArray });
         }

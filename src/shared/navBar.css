@@ -5,11 +5,11 @@ nav {
   
 }
 
-a {
+/* a {
     text-shadow: 0 0 10px black;
-}
+} */
 
-p {
+#nav-bar{
     font-size: 1.3em;
     color: white;
     text-shadow: 0 0 20px black;

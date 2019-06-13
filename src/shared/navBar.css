@@ -2,4 +2,18 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  
+}
+
+/* a {
+    text-shadow: 0 0 10px black;
+} */
+
+#nav-bar{
+    font-size: 1.3em;
+    color: white;
+    letter-spacing: .04em;
+    text-shadow: 
+      2px 2px 1px rgb(29, 2, 2), 
+      3px 3px 1px rgba(255, 255, 255, 0.2);
 }

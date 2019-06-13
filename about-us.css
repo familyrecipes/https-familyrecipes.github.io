@@ -1,83 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Fresca&display=swap');
-/* top div is the global parent */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
 
 body {
-    background-color: beige;
-    font-family: 'Fresca', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.4em;
 }
 
-#top-div {
+.top-people {
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 5%;
 }
 
-#top-people {
-    display: flex;
-    flex-direction: column;
+.top-people > div {
+    width: 45%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.13);
 }
 
-#top-person {
-    display: flex;
-    flex-direction: row;
-}
-
-
-/* eli's section */
-#eli {
-    display: flex;
-    align-items: center;
-}
-
-#eli img {
+img {
+    margin-top: 10px;
     height: 150px;
-    width: 100px;
 }
 
-/* erin's section */
-
-#erin {
-    display: flex;
-    align-items: center;
-    }
-    
-#erin img {
-    height: 150px;
-    width: 100px;
-}
-
-/* dirt's section */
-
-#dirt {
-    display: flex;
-    align-items: center;
-    }
-    
-#dirt img {
-    height: 150px;
-    width: 100px;
-}
-
-/* claire's section */
-
-#claire {
-    display: flex;
-    align-items: center;
-}
-
-#claire img {
-    height: 150px;
-    width: 100px;
-}
-
-/* noah's section */
-
-#noah {
-    display: flex;
-    align-items: center;
-    }
-    
-#noah img {
-    height: 150px;
-    width: 100px;
+img :last-child {
+    width: 90px;
 }

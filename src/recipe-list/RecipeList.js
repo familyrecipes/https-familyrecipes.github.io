@@ -17,10 +17,10 @@ class RecipeList extends Component {
 
     renderTemplate() {
         return /*html*/ `
-        <div id="list-container">
-            <ul id="recipe-list">
-            </ul> 
-        </div>
+            <div id="list-container">
+                <ul id="recipe-list">
+                </ul> 
+            </div>
         `;
     }
 }

@@ -29,7 +29,6 @@ class RecipeItem extends Component {
                 }
             }
         });
-        console.log(favorite.render());
         container.appendChild(favorite.render());
 
         userFavoriteRef.on('value', snapshot => {

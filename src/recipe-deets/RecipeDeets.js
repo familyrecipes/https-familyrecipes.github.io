@@ -8,10 +8,13 @@ class RecipeDeets extends Component {
         if(!recipe) {
             return `<div></div>`;
         }
-
+        const image = recipe.imageURL || './assets/placeholder.png';
+        
+        
         return /*html*/`
             <div>
                 <h2>${recipe.recipeTitle}</h2>
+                <img src="${image}">
                 <p>${recipe.prepTime}</p>
                 <p>${recipe.cookTime}</p>
                 <p>${recipe.readyIn}</p>

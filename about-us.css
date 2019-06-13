@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+}
+
+.top-people {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+}
+
+.top-people > div {
+    width: 45%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.13);
+}
+
+img {
+    margin-top: 10px;
+    height: 150px;
+}
+
+img :last-child {
+    width: 90px;
+}

@@ -18,10 +18,10 @@ class RecipeListApp extends Component {
         const recipeFilter = new RecipeFilter({ 
             onFilter:(filterValue) => {
                 const filterByDiet = toFilter.filter(recipe => {
-                    return recipe.dietType.toLowerCase().includes(filterValue[0]);
+                    return recipe.dietType.includes(filterValue[0]);
                 });
                 const filtered = filterByDiet.filter(recipe => {
-                    return recipe.mealType.toLowerCase().includes(filterValue[1]);
+                    return recipe.mealType.includes(filterValue[1]);
                 });
                 
                 recipeList.update({ recipes: filtered });

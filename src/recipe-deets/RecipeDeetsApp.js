@@ -32,7 +32,6 @@ class RecipeDeetsApp extends Component {
                     return recipe.key.includes(URLParams.key);
             
                 });
-                console.log(oneTrueRecipe[0]);
                 recipeDeets.update({ recipe: oneTrueRecipe[0] });
             
             });

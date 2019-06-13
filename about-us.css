@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Poiret+One&display=swap');
 
 body {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4em;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.6em;
 }
 
 .top-people {
@@ -32,4 +31,11 @@ img {
 
 img :last-child {
     width: 90px;
+}
+
+#back > a {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 2.3em;
 }

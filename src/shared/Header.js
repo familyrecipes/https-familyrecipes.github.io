@@ -26,7 +26,7 @@ class Header extends Component {
         return /*html*/ `
             <div id="header">
                 <header>
-                    <h1>Hello from header component</h1>   
+                    <h1>Family Cookbook</h1>   
                 </header>
             </div>
         `;

@@ -1,5 +1,5 @@
 #recipe-list {
-    /* border: 2px solid rgb(29, 2, 2); */
+    padding: 0;
 }
 
 li {
@@ -7,7 +7,7 @@ li {
     border: 2px solid rgb(29, 2, 2);
     margin: 3px;
     border-radius: 20px;
-    width: 300px;
+    width: 30%;
     box-shadow: 0 0 10px rgb(29, 2, 2);
     /* margin: 30px; */
 }
@@ -16,13 +16,13 @@ li {
     text-align: center;
     display: flex;
     flex-direction: row;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     grid-gap: 7px;
     gap: 7px;
     padding: 0;
-    /* justify-content: space-between;
-    align-items: center; */
     flex-wrap: wrap;
+    margin: 80px;
 }
 
 h3 {

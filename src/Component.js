@@ -15,7 +15,7 @@ class Component {
     }
 
     renderDOM() {
-const html = this.renderTemplate();
+        const html = this.renderTemplate();
         const dom = htmlToDOM(html);
         // remember the dom for later
         // for replacing or removing
@@ -27,7 +27,7 @@ const html = this.renderTemplate();
         throw new Error(`Component "${this.constructor.name}" needs to implement renderTemplate`);
     }
 
-            update(props) {
+    update(props) {
         props = props || {};
         // update the props:
         Object.assign(this.props, props);

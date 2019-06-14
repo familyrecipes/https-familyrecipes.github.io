@@ -42,7 +42,6 @@ class RecipeListApp extends Component {
                 mappedRecipes.forEach(recipes => {
                     allRecipes = allRecipes.concat(recipes);
                 });
-                console.log(allRecipes, 'label');
                 recipeList.update({ recipes: allRecipes });
             });
 

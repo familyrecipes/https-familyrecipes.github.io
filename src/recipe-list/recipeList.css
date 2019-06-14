@@ -17,7 +17,6 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     grid-gap: 7px;
     gap: 7px;
     padding: 0;

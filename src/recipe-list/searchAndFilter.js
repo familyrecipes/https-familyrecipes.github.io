@@ -2,7 +2,7 @@ function searchAndFilter(search, filter, allRecipes) {
     
     if(filter && !search) {
         const filterByDiet = allRecipes.filter(recipe => {
-            return recipe.dietType.includes(filter[0]);
+            return recipe.dietType.includes(filter[0]); 
         });
         const filtered = filterByDiet.filter(recipe => {
             return recipe.mealType.includes(filter[1]);

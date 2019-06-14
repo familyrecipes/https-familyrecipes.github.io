@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
+    width: 600px;
     margin-right: 34%;
-    margin-left: 29%;
-    border-right: 3px solid rgb(65, 11, 11);
-    border-left: 3px solid rgb(65, 11, 11);
+    margin-left: 25%;
+    /* border-right: 3px ridge rgb(65, 11, 11);
+    border-left: 3px solid rgb(65, 11, 11); */
     padding-left: 15px;
     margin-bottom: 30px;
 }
@@ -15,15 +15,15 @@ label {
     font-size: .6em;
 } 
 #title-input {
-    width: 377px;
+    width: 477px;
 }
 
 #cookbook-input {
-    width: 342px;
+    width: 442px;
 }
 
 #image-upload {
-    width: 372px;
+    width: 472px;
 }
 
 input {
@@ -36,20 +36,21 @@ select {
     border: 1px solid black;
     border-radius: 5px;
     height: 25px;
-    width: 238px;
+    width: 288px;
 }
 
 textarea {
     border: 1px solid black;
     border-radius: 5px;
-    width: 475px;
+    width: 575px;
     height: 80px;
 }
 
 #submit-button {
     border: 1px solid black;
     border-radius: 5px;
-    margin-left: 203px;
+    margin-left: 253px;
+    height: 30px;
 }
 
 .time-inputs input {
@@ -57,5 +58,6 @@ textarea {
 }
 
 #time-inputs input {
-    width: 234px;
+    width: 284px;
 }
+

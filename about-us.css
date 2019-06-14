@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC|Poiret+One&display=swap');
-
 body {
-    font-family: 'Poiret One', cursive;
-    font-size: 1.6em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;
 }
 
 .top-people {
@@ -22,6 +20,7 @@ body {
 
 .profile {
     color: black;
+    text-align: center;
 }
 
 img {
@@ -38,4 +37,5 @@ img :last-child {
     justify-content: center;
     color: black;
     font-size: 2.3em;
+    text-decoration: none;
 }

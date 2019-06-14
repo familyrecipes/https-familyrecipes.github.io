@@ -13,7 +13,6 @@ class RecipeDeetsApp extends Component {
 
         const header = new Header();
         dom.insertBefore(header.render(), main);
-
         
         const URLParams = QUERY.parse(window.location.search.slice(1));
         const recipeRef = recipesByUserRef.child(URLParams.key);
@@ -45,12 +44,12 @@ class RecipeDeetsApp extends Component {
         
         return dom;
     }
+
     renderTemplate() {
         return /*html*/`
             <div>
                 <main></main>
             </div>
-            
         `;
     }
 }

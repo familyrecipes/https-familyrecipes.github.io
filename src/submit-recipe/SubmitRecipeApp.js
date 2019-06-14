@@ -5,6 +5,7 @@ import Footer from '../shared/Footer.js';
 import { auth, recipesByUserRef } from '../services/firebase.js';
 
 class SubmitRecipeApp extends Component {
+    
     render() {
         const dom = this.renderDOM();
         
@@ -23,13 +24,14 @@ class SubmitRecipeApp extends Component {
 
         return dom;
     }
+
     renderTemplate() {
         return /*html*/ `
             <div>
                 <main>
                 </main>
             </div>
-    `;
+        `;
     }
 }
 

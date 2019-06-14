@@ -36,8 +36,6 @@ class FavoritesApp extends Component {
                 <main></main>
             </div>
         `;
-
     }
-
 }
 export default FavoritesApp;

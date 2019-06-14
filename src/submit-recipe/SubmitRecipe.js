@@ -125,7 +125,7 @@ class SubmitRecipe extends Component {
                     <button id="submit-button">Add recipe</button>
                 </form>
             </div>
-    `;
+        `;
     }
 }
 

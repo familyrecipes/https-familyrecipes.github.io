@@ -14,7 +14,7 @@ class RecipeItem extends Component {
             .child(recipe.key);
 
         const container = dom.querySelector('.favorite-container');
-        const image = recipe.imageURL || './assets/placeholder.png';
+        const image = recipe.imageURL || './assets/food_default.png';
         const favorite = new Favorite({
             isFavorite: false,
             onFavorite: (makeFavorite) => {
@@ -48,7 +48,7 @@ class RecipeItem extends Component {
                 <div class="favorite-container"></div>
                 <a href="./recipe-deets.html?key=${recipe.key}">
                 <h3>${recipe.recipeTitle}</h3>
-                <img src="./assets/placeholder.png">
+                <img src="./assets/food_default.png">
                 </a>
             </li>
         `;

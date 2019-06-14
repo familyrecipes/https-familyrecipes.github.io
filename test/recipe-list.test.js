@@ -16,7 +16,7 @@ test('renders li', assert => {
             <div class="favorite-container"></div> 
             <a href="./recipe-deets.html?key=${recipe.key}"> 
                 <h3>I REIGN SUPREME</h3> 
-                <img src="./assets/placeholder.png">
+                <img src="./assets/food_default.png">
             </a>
         </li>
     `;

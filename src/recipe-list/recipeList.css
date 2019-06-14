@@ -29,8 +29,10 @@ a:hover {
 }
 
 a img {
-    border-radius: 0;
-}
+    width: 175px;
+    height: auto;
+    text-align: center;
+}   
 
 #list-container{
     text-align: center;

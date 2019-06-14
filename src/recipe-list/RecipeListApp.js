@@ -23,7 +23,7 @@ class RecipeListApp extends Component {
                 filterTerm = filterValue;
                 const filtered = searchAndFilter(searchTerm, filterValue, allRecipes);
                 
-                recipeList.update({ recipes: filtered });
+                recipeList.update({ recipes: filtered || allRecipes });
             }
         });
 
@@ -42,6 +42,7 @@ class RecipeListApp extends Component {
                 mappedRecipes.forEach(recipes => {
                     allRecipes = allRecipes.concat(recipes);
                 });
+                console.log(allRecipes, 'label');
                 recipeList.update({ recipes: allRecipes });
             });
 
@@ -54,7 +55,7 @@ class RecipeListApp extends Component {
             const search = searchParams.get('search');
             searchTerm = search;
             const searchArray = searchAndFilter(search, filterTerm, allRecipes);
-            recipeList.update({ recipes: searchArray });
+            recipeList.update({ recipes: searchArray || allRecipes });
         }
 
         searchRecipes();

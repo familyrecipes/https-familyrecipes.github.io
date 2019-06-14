@@ -1,6 +1,6 @@
 import Component from '../Component.js';
 
-class FavoritesApp extends Component {
+class Favorite extends Component {
     
     render() {
         const image = this.renderDOM();
@@ -19,4 +19,4 @@ class FavoritesApp extends Component {
         `;
     }
 }
-export default FavoritesApp;
+export default Favorite;

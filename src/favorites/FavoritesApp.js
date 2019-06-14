@@ -4,6 +4,7 @@ import RecipeList from '../recipe-list/RecipeList.js';
 import { auth, userFavoritesRef } from '../services/firebase.js';
 import Footer from '../shared/Footer.js';
 
+
 class FavoritesApp extends Component {
 
     render() {

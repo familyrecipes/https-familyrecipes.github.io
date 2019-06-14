@@ -2,6 +2,7 @@ import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import RecipeList from './RecipeList.js';
 import RecipeFilter from './RecipeFilter.js';
+import Footer from '../shared/Footer.js';
 import Search from './Search.js';
 import searchAndFilter from './searchAndFilter.js';
 import { recipesByUserRef } from '../services/firebase.js';
@@ -13,7 +14,7 @@ class RecipeListApp extends Component {
 
         const header = new Header();
         dom.insertBefore(header.render(), main);
-
+        
         let allRecipes = [];
         let searchTerm;
         let filterTerm;
@@ -26,12 +27,12 @@ class RecipeListApp extends Component {
                 recipeList.update({ recipes: filtered || allRecipes });
             }
         });
-
+        
         dom.appendChild(recipeFilter.render());
-
+        
         const search = new Search();
         dom.appendChild(search.render());
-
+        
         recipesByUserRef
             .on('value', snapshot => {
                 const value = snapshot.val();
@@ -44,10 +45,10 @@ class RecipeListApp extends Component {
                 });
                 recipeList.update({ recipes: allRecipes });
             });
-
+        
         const recipeList = new RecipeList({ recipes: [] });
         dom.appendChild(recipeList.render());
-
+        
         function searchRecipes() { 
             const params = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(params);
@@ -61,10 +62,13 @@ class RecipeListApp extends Component {
         window.addEventListener('hashchange', () => {
             searchRecipes();
         });
-
+        
+        const footer = new Footer();
+        dom.appendChild(footer.render());
+        
         return dom;
     }
-
+    
     renderTemplate() {
         return /*html*/`
             <div>

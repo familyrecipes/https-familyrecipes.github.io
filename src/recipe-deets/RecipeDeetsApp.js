@@ -3,6 +3,7 @@ import Header from '../shared/Header.js';
 import RecipeDeets from './RecipeDeets.js';
 import QUERY from '../utils/QUERY.js';
 import { recipesByUserRef } from '../services/firebase.js';
+import Footer from '../shared/Footer.js';
 
 class RecipeDeetsApp extends Component {
 
@@ -39,6 +40,9 @@ class RecipeDeetsApp extends Component {
         const recipeDeets = new RecipeDeets({ recipeRef, key: URLParams.key });
         main.appendChild(recipeDeets.render());
 
+        const footer = new Footer();
+        dom.appendChild(footer.render());
+        
         return dom;
     }
     renderTemplate() {

@@ -47,8 +47,9 @@ class RecipeItem extends Component {
             <li>
                 <div class="favorite-container"></div>
                 <a href="./recipe-deets.html?key=${recipe.key}">
-                <h3>${recipe.recipeTitle}</h3>
+                <h5>${recipe.cookbookTag}</h5>
                 <img src="./assets/placeholder.png">
+                <h3>${recipe.recipeTitle}</h3>
                 </a>
             </li>
         `;
@@ -58,6 +59,7 @@ class RecipeItem extends Component {
             <li>
                 <div class="favorite-container"></div>
                 <a href="./recipe-deets.html?key=${recipe.key}">
+                <h5>${recipe.cookbookTag}</h5>
                 <img src="${recipe.imageURL}">
                 <h3>${recipe.recipeTitle}</h3>
                 </a>

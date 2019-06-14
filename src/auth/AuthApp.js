@@ -33,8 +33,7 @@ class AuthApp extends Component {
 
                     return true;
                 }
-            }
-            
+            } 
         });
 
         return dom;

@@ -26,6 +26,7 @@ body {
 img {
     margin-top: 10px;
     height: 150px;
+    border-radius: 50%;
 }
 
 img :last-child {

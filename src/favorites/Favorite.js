@@ -1,6 +1,5 @@
 import Component from '../Component.js';
 
-
 class FavoritesApp extends Component {
     
     render() {

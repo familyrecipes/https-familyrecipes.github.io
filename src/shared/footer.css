@@ -1,14 +1,18 @@
-#footer {
-    background-image: url(../../assets/spicefooter.jpg);
-    height: 30px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(6, 25, 138);
-    color: white;
-    margin-top: 200px;
-    border: 1px solid black;
-    border-radius: 25px;
-    /* border: 1px solid rgb(131, 128, 128); */
+footer {
+    display: flex;
+    background-image: url(../../assets/hexellence.png);
+    flex-shrink: 0;
+    height: 90px;
+    border-radius: 30px;
+    justify-content: center;
+} 
+
+#footer a {
+    text-align: center;
+    margin-top: 1%;
+    color: black;
+}
+
+#footer a:hover {
+    transform: scale(1.2);
 }

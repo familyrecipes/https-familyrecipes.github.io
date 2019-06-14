@@ -7,6 +7,8 @@ class SubmitRecipe extends Component {
         const form = this.renderDOM();
         const submitForm = form.querySelector('form');
 
+        
+
         const submitButton = form.querySelector('#submit-button');
         const recipeKey = recipesByUserRef.child(this.props.key);
         
@@ -62,6 +64,9 @@ class SubmitRecipe extends Component {
     }
 
     renderTemplate() {
+        const ingredientPlaceholder = '2 cups of flour\n1/2 cup of sugar\n2 eggs\nect...';
+        const instructionsPlaceholder = '1. add flour and sugar to a large mixing bowl\n2. thouroughly mix together\n3. add eggs and whisk until disired consistancy\n4. ect...';
+
         return /*html*/ `
             <div id="container">
                 <form>
@@ -119,7 +124,7 @@ class SubmitRecipe extends Component {
                     <button id="submit-button">Add recipe</button>
                 </form>
             </div>
-    `;
+        `;
     }
 }
 

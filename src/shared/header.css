@@ -35,7 +35,7 @@ h1 {
 div .profile {
     grid-column-start: 1; 
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 nav {
@@ -52,9 +52,4 @@ a {
     font-weight: 800;
     margin-bottom: 10px;
     width: 30%;
-}
-
-a:hover {
-    background-color: rgba(255, 255, 255, 0.658);
-    border-radius: 50px;
 }

@@ -1,7 +1,6 @@
 import Component from '../Component.js';
 import { auth } from '../services/firebase.js';
 
-
 class Profile extends Component {
     render() {
         const dom = this.renderDOM();
@@ -26,9 +25,9 @@ class Profile extends Component {
             <div class="profile">
                 <img src="${avatar}">
                 <span>${user.displayName}</span>
-                <button>Sign Out</button>
+                <button></button>
             </div>
-    `;
+        `;
     }
 }
 

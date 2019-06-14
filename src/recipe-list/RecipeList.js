@@ -5,7 +5,7 @@ class RecipeList extends Component {
 
     render() {
         const dom = this.renderDOM();
-
+        
         const recipes = this.props.recipes;
         recipes.forEach(recipe => {
             const recipeItem = new RecipeItem({ recipe });
@@ -17,10 +17,10 @@ class RecipeList extends Component {
 
     renderTemplate() {
         return /*html*/ `
-        <div>
-            <ul id="recipe-list">
-            </ul> 
-        </div>
+            <div id="list-container">
+                <ul id="recipe-list">
+                </ul> 
+            </div>
         `;
     }
 }

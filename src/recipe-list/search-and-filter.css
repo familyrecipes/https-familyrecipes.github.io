@@ -1,0 +1,38 @@
+select {
+    text-align: center;
+    border: 1px solid black;
+    height: 40px;
+    font-size: 15px;
+    box-shadow: 0 0 5px gray;
+}
+
+form {
+    text-align: center;
+    /* box-shadow: 0 0 5px gray; */
+}
+
+input {
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 150px;
+    font-size: 15px;
+    box-shadow: 0 0 5px gray;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 35px;
+    font-size: 15px;
+    box-shadow: 0 0 5px gray;
+}
+
+button:focus {
+    outline: 0;
+    background-color: rgba(211, 211, 211, 0.548);
+}

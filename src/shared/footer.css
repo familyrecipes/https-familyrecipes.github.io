@@ -1,0 +1,18 @@
+footer {
+    display: flex;
+    background-image: url(../../assets/hexellence.png);
+    flex-shrink: 0;
+    height: 90px;
+    border-radius: 30px;
+    justify-content: center;
+} 
+
+#footer a {
+    text-align: center;
+    margin-top: 1%;
+    color: black;
+}
+
+#footer a:hover {
+    transform: scale(1.2);
+}

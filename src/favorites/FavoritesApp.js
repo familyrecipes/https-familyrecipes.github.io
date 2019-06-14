@@ -2,10 +2,10 @@ import Component from '../Component.js';
 import Header from '../shared/Header.js';
 import RecipeList from '../recipe-list/RecipeList.js';
 import { auth, userFavoritesRef } from '../services/firebase.js';
+import Footer from '../shared/Footer.js';
 
 class FavoritesApp extends Component {
 
-    //TODO: add render, render component, etc.
     render() {
         const dom = this.renderDOM();
         const main = dom.querySelector('main');
@@ -24,8 +24,10 @@ class FavoritesApp extends Component {
                 recipeList.update({ recipes });
             });
 
-        return dom;
+        const footer = new Footer();
+        dom.appendChild(footer.render());
 
+        return dom;
     }
 
     renderTemplate() {
@@ -34,8 +36,6 @@ class FavoritesApp extends Component {
                 <main></main>
             </div>
         `;
-
     }
-
 }
 export default FavoritesApp;

@@ -13,9 +13,30 @@ body {
     box-shadow: 0 0 6px rgb(0, 0, 0);
 }
 
-main p {
-    display: block;
-    text-align: center;
-    margin: 5%;
-    font-family: 'Cormorant Garamond', serif;
+#recipe-deets-object {
+    margin-left: 10px;
+    margin-bottom: 100px;
+
 }
+
+#recipe-deets-object img {
+    max-width: 400px;
+    object-fit: cover;
+}
+
+#recipe-title {
+    text-align: center;
+}
+
+img {
+    margin-left: 33%;
+    border: 3px solid rgb(70, 67, 67);
+    border-radius: 10px;
+}
+
+p {
+    margin-left: 30px;
+}
+
+
+

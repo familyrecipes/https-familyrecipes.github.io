@@ -12,13 +12,17 @@ li {
     border: 2px solid rgba(0, 0, 0, 0.37);
     margin: 3px;
     border-radius: 20px;
-    width: 30%;
+    width: 20%;
     box-shadow: 0 0 10px rgb(29, 2, 2);
     margin: 10px;
 }
 
 a {
     margin-top: 30px;
+    width: 80%;
+    height: 30%;
+    object-fit: contain;
+    height: auto;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -29,7 +33,10 @@ a:hover {
 }
 
 a img {
-    border-radius: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
 #list-container{
@@ -41,10 +48,11 @@ a img {
     gap: 7px;
     padding: 0;
     flex-wrap: wrap;
-    margin: 80px;
+    margin: 10px;
 }
 
-h3 {
+a h3 {
+    margin: 2px;
     color: rgb(29, 2, 2);
 }
 

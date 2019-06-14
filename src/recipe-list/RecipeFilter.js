@@ -19,7 +19,6 @@ class RecipeFilter extends Component {
         });
 
         return dom;
-
     }
 
     renderTemplate() {
@@ -48,5 +47,3 @@ class RecipeFilter extends Component {
     }
 }
 export default RecipeFilter;
-
-

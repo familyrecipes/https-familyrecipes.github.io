@@ -37,10 +37,10 @@ class Search extends Component {
     renderTemplate() {
         return /*html*/ `
             <form>
-            <button>Search: </button>
+                <button>Search: </button>
                 <input id="search-bar">
             </form>
-    `;
+        `;
     }
 }
 

@@ -1,66 +1,3 @@
-/* #container {
-    display: flex;
-    justify-content: center;
-}
-
-#title-and-input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#time {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-#time input {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 50px;
-    width: 100px;
-}
-
-#ingredients {
-    display: flex;
-    justify-content: center;
-    order: 0;
-}
-
-#ingredients textarea {
-    width: 600px;
-    height: 100px;
-}
-
-#instructions {
-    display: flex;
-    justify-content: center;
-}
-
-#instructions textarea {
-    width: 600px;
-    height: 200px;
-}
-
-#notes {
-    display: flex;
-    justify-content: center;
-}
-
-#notes textarea {
-    width: 600px;
-    height: 100px;
-}
-
-#submit-button {
-    display: flex;
-    justify-content: center;
-    margin-left: 45%;
-    width: 100px;
-} */
-
 #container {
     display: flex;
     flex-direction: column;
@@ -115,8 +52,6 @@ textarea {
     margin-left: 203px;
 }
 
-
-
 .time-inputs input {
     width: 162px;
 }
@@ -124,4 +59,3 @@ textarea {
 #time-inputs input {
     width: 234px;
 }
-

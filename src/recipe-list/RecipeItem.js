@@ -53,6 +53,7 @@ class RecipeItem extends Component {
             </li>
         `;
         }
+        
         return /*html*/ `
             <li>
                 <div class="favorite-container"></div>

@@ -1,9 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|IM+Fell+DW+Pica+SC&display=swap');
+
+body {
+    background-image: url(../../assets/hexellence.png);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.651);
+    border-radius: 40px;
+    box-shadow: 0 0 6px rgb(0, 0, 0);
+}
+
 #recipe-deets-object {
-    margin-left: 200px;
+    margin-left: 10px;
     margin-bottom: 100px;
+
 }
 
 #recipe-deets-object img {
     max-width: 400px;
     object-fit: cover;
 }
+
+#recipe-title {
+    text-align: center;
+}
+
+img {
+    margin-left: 33%;
+    border: 3px solid rgb(70, 67, 67);
+    border-radius: 10px;
+}
+
+p {
+    margin-left: 30px;
+}
+
+
+

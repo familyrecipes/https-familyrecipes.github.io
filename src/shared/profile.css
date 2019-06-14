@@ -3,7 +3,6 @@
     border-radius: 20px;
     border: 2px solid rgba(0, 0, 0, 0.336);
     display: flex;
-    justify-content: center;
     margin-left: 5%;
     color: rgb(0, 0, 0);
     font-size: 1.3em;
@@ -13,7 +12,6 @@
 .profile img {
     display: flex;
     border-radius: 100%;
-    margin-left: 35%;
     border: 3px solid rgba(0, 0, 0, 0.336);
 }
 
@@ -25,7 +23,6 @@
     height: 25px;
     border-radius: 10px;
     padding: 18px; 
-    margin-left: 35%;
 }
 
 .profile button:hover {
@@ -34,5 +31,5 @@
 
 .profile span {
     display: flex;
-    margin-left: 20%;
+    font-size: .5em;
 }

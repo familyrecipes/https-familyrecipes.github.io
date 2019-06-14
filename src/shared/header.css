@@ -35,7 +35,7 @@ h1 {
 div .profile {
     grid-column-start: 1; 
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 nav {

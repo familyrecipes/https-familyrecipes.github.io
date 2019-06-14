@@ -7,7 +7,7 @@ class RecipeDeets extends Component {
         if(!recipe) {
             return `<div></div>`;
         }
-        const image = recipe.imageURL || './assets/placeholder.png';
+        const image = recipe.imageURL || './assets/food_default.png';
         const ingredients = recipe.ingredients.map(ingredient => {
             return `<li>${ingredient}</li>`;
         }).join(' ');

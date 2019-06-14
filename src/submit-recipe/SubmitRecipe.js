@@ -105,11 +105,11 @@ class SubmitRecipe extends Component {
                     </div>
                     <div>
                         <p class="howto" for="ingredients">Ingredients: Type an ingredient then press enter (make sure each ingredient is on a new line! Without blank lines.).</p>
-                        <textarea id="ingredients" required name="ingredients" placeholder="Ingredients..."></textarea>
+                        <textarea id="ingredients" required name="ingredients" placeholder="${ingredientPlaceholder}"></textarea>
                     </div>
                     <div>
                         <p class="howto" for="instructions">Instructions: Write a step then press enter (make sure each step starts on a new line! Without blank lines).</p>
-                        <textarea id="instructions" required name="instructions" placeholder="Instructions..."></textarea>
+                        <textarea id="instructions" required name="instructions" placeholder="${instructionsPlaceholder}"></textarea>
                     </div>
                     
                     <div>
@@ -117,8 +117,7 @@ class SubmitRecipe extends Component {
                     </div>
                     <div>
                         <textarea id="notes" name="notes" placeholder="Notes..."></textarea>
-                    </div>
-                    
+                    </div>      
                     <button id="submit-button">Add recipe</button>
                 </form>
             </div>

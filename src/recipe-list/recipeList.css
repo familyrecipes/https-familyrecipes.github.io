@@ -36,6 +36,7 @@ a img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    margin-bottom: 15px;
 }
 
 #list-container{
@@ -50,7 +51,8 @@ a img {
     margin: 10px;
 }
 
-h3 {
+a h3 {
+    margin: 2px;
     color: rgb(29, 2, 2);
 }
 

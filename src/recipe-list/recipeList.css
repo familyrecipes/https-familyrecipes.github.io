@@ -3,13 +3,33 @@
 }
 
 li {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     list-style: none;
-    border: 2px solid rgb(29, 2, 2);
+    border: 2px solid rgba(0, 0, 0, 0.37);
     margin: 3px;
     border-radius: 20px;
     width: 30%;
     box-shadow: 0 0 10px rgb(29, 2, 2);
     margin: 10px;
+}
+
+a {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0);
+    transform: scale(1.1);
+}
+
+a img {
+    border-radius: 0;
 }
 
 #list-container{
@@ -26,4 +46,20 @@ li {
 
 h3 {
     color: rgb(29, 2, 2);
+}
+
+.favorite-container {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorite-container img {
+    height: 45px;
+    width: auto;
 }

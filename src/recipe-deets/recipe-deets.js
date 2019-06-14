@@ -1,4 +1,3 @@
-//THIS IS LIKE OUR INDEX.JS FILE THAT WE LINK TO OUR HTML PAGE
 import '../utils/check-auth.js';
 import { auth } from '../services/firebase.js';
 import RecipeDeetsApp from './RecipeDeetsApp.js';

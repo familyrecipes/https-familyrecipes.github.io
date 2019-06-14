@@ -4,7 +4,6 @@ class RecipeDeets extends Component {
 
     renderTemplate() {
         const recipe = this.props.recipe;
-        console.log(recipe);
         if(!recipe) {
             return `<div></div>`;
         }
@@ -17,11 +16,6 @@ class RecipeDeets extends Component {
             return `<li>${instruction}</li>`;
         }).join(' ');
 
-        // const ingredientsList = new IngredientsList();
-        // dom.appendChild(ingredientsList.render());
-
-        
-        
         return /*html*/`
             <div id="recipe-deets-object">
                 <h2>${recipe.recipeTitle}</h2>

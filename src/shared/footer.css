@@ -1,0 +1,14 @@
+#footer {
+    background-image: url(../../assets/spicefooter.jpg);
+    height: 30px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(6, 25, 138);
+    color: white;
+    margin-top: 200px;
+    border: 1px solid black;
+    border-radius: 25px;
+    /* border: 1px solid rgb(131, 128, 128); */
+}

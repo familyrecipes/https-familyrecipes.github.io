@@ -12,9 +12,9 @@ class NavBar extends Component {
         return /*html*/ `
             <nav id="nav-bar">
                 <a href="./recipe-list.html">View Recipes</a>
-                <p>✼</p>
+                <p>༶</p>
                 <a href="./favorites.html">Favorites</a>
-                <p>✼</p>
+                <p>༶</p>
                 <a href="./submit-recipe.html">Submit a Recipe</a>
             </nav>
     `;

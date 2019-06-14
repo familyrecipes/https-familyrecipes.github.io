@@ -2,15 +2,10 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-  
 }
 
-/* a {
-    text-shadow: 0 0 10px black;
-} */
-
 #nav-bar{
-    font-size: 1.3em;
+    font-size: 1.1em;
     color: white;
     letter-spacing: .04em;
     text-shadow: 

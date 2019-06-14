@@ -65,16 +65,63 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    margin-right: 40%;
-    margin-left: 43%;
-
+    width: 500px;
+    margin-right: 34%;
+    margin-left: 29%;
+    border-right: 3px solid rgb(65, 11, 11);
+    border-left: 3px solid rgb(65, 11, 11);
+    padding-left: 15px;
+    margin-bottom: 30px;
 }
+
 label {
     font-size: .6em;
 } 
+#title-input {
+    width: 377px;
+}
+
+#cookbook-input {
+    width: 342px;
+}
+
+#image-upload {
+    width: 372px;
+}
 
 input {
     border: 1px solid black;
     border-radius: 5px;
+    height: 20px;
 }
+
+select {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    width: 238px;
+}
+
+textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 475px;
+    height: 80px;
+}
+
+#submit-button {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 203px;
+}
+
+
+
+.time-inputs input {
+    width: 162px;
+}
+
+#time-inputs input {
+    width: 234px;
+}
+

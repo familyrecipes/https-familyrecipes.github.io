@@ -66,45 +66,62 @@ class SubmitRecipe extends Component {
             <div id="container">
                 <form>
                     <div>
-                        <label>Recipe Title: <input required name="recipe-title" placeholder="Recipe Title..."></label>
+                        <label>Recipe Title: <input id="title-input" required name="recipe-title" placeholder="Recipe Title..."></label>
                     </div>
+
                     <div>
-                        <label>Image upload: <input type="file" accept="image/*" name="image" placeholder="image uplaod"></label>
+                        <label>Cookbook Name: <input id="cookbook-input" required name="cookbook-tag" placeholder="Cookbook Name..."></label>
                     </div>
+
+                    <div>
+                        <label>Image upload: <input id="image-upload" type="file" accept="image/*" name="image"></label>
+                    </div>
+
+                    <div>
                         <select required id="meal-type" name="meal-type">Meal Type
-                        <option disabled selected value> select meal type below </option>
+                        <option disabled selected value> select meal type here </option>
                             <option id="breakfast" value="Breakfast">Breakfast</option>
                             <option id="lunch" value="Lunch">Lunch</option>
                             <option id="dinner" value="Dinner">Dinner</option>
                             <option id="dessert" value="Dessert">Dessert</option>
                             <option id="side" value="Side">Side</option>
                         </select>
-                    <div>
                         <select id="diet-type" name="diet-type">Diet Type
-                            <option disabled selected value> select diet type below </option>
+                            <option disabled selected value> select diet type here </option>
                             <option value="Vegetarian">Vegetarian</option>
                             <option value="Vegan">Vegan</option>
                             <option value="Gluten-free">Gluten-free</option>
                         </select>
                     </div>
-                    <div>
+
+                    <div id="time-inputs">
                         <input name="prep-time" placeholder="Prep time...">
                         <input name="cook-time" placeholder="Cook time...">
                         <input name="ready-in" placeholder="Ready in...">
                         <input name="servings" placeholder="Servings...">
                     </div>
+
                     <div>
-                        <label>Ingredients
-                        <textarea required name="ingredients" placeholder="1tbsp sugar, 3 cups flour..."></textarea>
-                        </label>
+                        <label for="ingredients">Ingredients</label>
                     </div>
                     <div>
-                        <textarea required name="instructions" placeholder="Instructions..."></textarea>
-                        <textarea name="notes" placeholder="Notes..."></textarea>
-                        <input required name="cookbook-tag" placeholder="Cookbook Name">
+                        <textarea id="ingredients" required name="ingredients" placeholder="1tbsp sugar, 3 cups flour..."></textarea>
+                    </div>
+
+                    <div>
+                        <label for="instructions">Instructions</label>
                     </div>
                     <div>
+                        <textarea id="instructions" required name="instructions" placeholder="Instructions..."></textarea>
                     </div>
+                    
+                    <div>
+                        <label for="notes">Notes</label>
+                    </div>
+                    <div>
+                        <textarea id="notes" name="notes" placeholder="Notes..."></textarea>
+                    </div>
+                    
                     <button id="submit-button">Add recipe</button>
                 </form>
             </div>

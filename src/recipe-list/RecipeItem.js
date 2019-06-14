@@ -57,8 +57,8 @@ class RecipeItem extends Component {
             <li>
                 <div class="favorite-container"></div>
                 <a href="./recipe-deets.html?key=${recipe.key}">
-                <h3>${recipe.recipeTitle}</h3>
                 <img src="${recipe.imageURL}">
+                <h3>${recipe.recipeTitle}</h3>
                 </a>
             </li>
         `;

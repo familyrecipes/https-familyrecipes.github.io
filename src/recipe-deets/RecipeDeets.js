@@ -17,19 +17,19 @@ class RecipeDeets extends Component {
         }).join(' ');
 
         return /*html*/`
-            <div>
+            <div id="recipe-deets-object">
                 <h2>${recipe.recipeTitle}</h2>
                 <img src="${image}">
-                <p>${recipe.prepTime}</p>
-                <p>${recipe.cookTime}</p>
-                <p>${recipe.readyIn}</p>
-                <p>${recipe.servings}</p>
-                <ul>${ingredients}</ul>
-                <ol>${instructions}</ol>
-                <p>${recipe.notes}</p>
-                <p>${recipe.mealType}</p>
-                <p>${recipe.cookbookTag}</p>
-                <p>${recipe.dietType}</p>
+                <p>Prep Time: ${recipe.prepTime}</p>
+                <p>Cook Time: ${recipe.cookTime}</p>
+                <p>Ready In: ${recipe.readyIn}</p>
+                <p>Servings: ${recipe.servings}</p>
+                <ul>Ingredents: ${ingredients}</ul>
+                <ol>Instructions: ${instructions}</ol>
+                <p>Notes: ${recipe.notes}</p>
+                <p>Meal Type: ${recipe.mealType}</p>
+                <p>Diet Type: ${recipe.dietType}</p>
+                <p>Cookbook Name: ${recipe.cookbookTag}</p>
             </div>
         `;
     }

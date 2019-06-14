@@ -100,18 +100,12 @@ class SubmitRecipe extends Component {
                         <input name="ready-in" placeholder="Ready in...">
                         <input name="servings" placeholder="Servings...">
                     </div>
-
                     <div>
-                        <label for="ingredients">Ingredients</label>
+                        <p class="howto" for="ingredients">Ingredients: Type an ingredient then press enter (make sure each ingredient is on a new line! Without blank lines.).</p>
+                        <textarea id="ingredients" required name="ingredients" placeholder="Ingredients..."></textarea>
                     </div>
                     <div>
-                        <textarea id="ingredients" required name="ingredients" placeholder="1tbsp sugar, 3 cups flour..."></textarea>
-                    </div>
-
-                    <div>
-                        <label for="instructions">Instructions</label>
-                    </div>
-                    <div>
+                        <p class="howto" for="instructions">Instructions: Write a step then press enter (make sure each step starts on a new line! Without blank lines).</p>
                         <textarea id="instructions" required name="instructions" placeholder="Instructions..."></textarea>
                     </div>
                     

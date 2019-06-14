@@ -3,6 +3,7 @@
     margin-bottom: 100px;
 }
 
-h2 {
-    /* margin-left: 20%; */
+#recipe-deets-object img {
+    max-width: 400px;
+    object-fit: cover;
 }

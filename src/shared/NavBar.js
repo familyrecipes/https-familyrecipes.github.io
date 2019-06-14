@@ -1,6 +1,5 @@
 import Component from '../Component.js';
 
-
 class NavBar extends Component {
 
     renderTemplate() {
@@ -17,7 +16,7 @@ class NavBar extends Component {
                 <p>༶</p>
                 <a href="./submit-recipe.html">Submit a Recipe</a>
             </nav>
-    `;
+        `;
     }
 }
 

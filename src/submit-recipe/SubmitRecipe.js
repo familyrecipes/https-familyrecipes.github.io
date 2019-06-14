@@ -48,7 +48,7 @@ class SubmitRecipe extends Component {
                     instructions: instructions,
                     notes: formData.get('notes'),
                     cookbookTag: formData.get('cookbook-tag'),
-                    dietType: formData.get('diet-type'),
+                    dietType: formData.get('diet-type') || '',
                     imageURL: url || null
 
                 };
@@ -130,7 +130,7 @@ class SubmitRecipe extends Component {
                     <button id="submit-button">Add recipe</button>
                 </form>
             </div>
-    `;
+        `;
     }
 }
 

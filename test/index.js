@@ -16,6 +16,7 @@ global.URLSearchParams = window.URLSearchParams;
 global.firebase = require('firebase/app');
 require('firebase/auth');
 require('firebase/database');
+require('firebase/storage')
 
 require = require('esm')(module);
 module.exports = require('./tests.js');

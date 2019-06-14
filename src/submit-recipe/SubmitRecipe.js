@@ -7,6 +7,8 @@ class SubmitRecipe extends Component {
         const form = this.renderDOM();
         const submitForm = form.querySelector('form');
 
+        
+
         const submitButton = form.querySelector('#submit-button');
         const recipeKey = recipesByUserRef.child(this.props.key);
         
@@ -62,6 +64,9 @@ class SubmitRecipe extends Component {
     }
 
     renderTemplate() {
+        const ingredientPlaceholder = '2 cups of flour\n1/2 cup of sugar\n2 eggs\nect...';
+        const instructionsPlaceholder = '1. add flour and sugar to a large mixing bowl\n2. thouroughly mix together\n3. add eggs and whisk until disired consistancy\n4. ect...';
+
         return /*html*/ `
             <div id="container">
                 <form>
@@ -105,14 +110,14 @@ class SubmitRecipe extends Component {
                         <label for="ingredients">Ingredients</label>
                     </div>
                     <div>
-                        <textarea id="ingredients" required name="ingredients" placeholder="1tbsp sugar, 3 cups flour..."></textarea>
+                        <textarea id="ingredients" required name="ingredients" placeholder="${ingredientPlaceholder}"></textarea>
                     </div>
 
                     <div>
                         <label for="instructions">Instructions</label>
                     </div>
                     <div>
-                        <textarea id="instructions" required name="instructions" placeholder="Instructions..."></textarea>
+                        <textarea id="instructions" required name="instructions" placeholder="${instructionsPlaceholder}"></textarea>
                     </div>
                     
                     <div>

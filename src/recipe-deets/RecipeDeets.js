@@ -25,12 +25,12 @@ class RecipeDeets extends Component {
         return /*html*/`
             <div id="recipe-deets-object">
                 <h2>${recipe.recipeTitle}</h2>
-                <img src="${image}">
+                <img class="uploaded-image" src="${image}">
                 <p>Prep Time: ${recipe.prepTime}</p>
                 <p>Cook Time: ${recipe.cookTime}</p>
                 <p>Ready In: ${recipe.readyIn}</p>
                 <p>Servings: ${recipe.servings}</p>
-                <ul>Ingredents: ${ingredients}</ul>
+                <ul>Ingredients: ${ingredients}</ul>
                 <ol>Instructions: ${instructions}</ol>
                 <p>Notes: ${recipe.notes}</p>
                 <p>Meal Type: ${recipe.mealType}</p>

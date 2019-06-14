@@ -6,7 +6,9 @@ QUnit.module('Recipe Item test');
 test('renders li', assert => {
     //arrange
     const recipe = {
-        recipeTitle: 'I REIGN SUPREME'
+        recipeTitle: 'I REIGN SUPREME',
+        cookbookTag: 'Claire\'s'
+
     };
 
     const newRecipeItem = new RecipeItem({ recipe }); 
@@ -15,8 +17,9 @@ test('renders li', assert => {
         <li> 
             <div class="favorite-container"></div> 
             <a href="./recipe-deets.html?key=${recipe.key}"> 
-                <h3>I REIGN SUPREME</h3> 
+                <h5>Claire's</h5>
                 <img src="./assets/placeholder.png">
+                <h3>I REIGN SUPREME</h3> 
             </a>
         </li>
     `;

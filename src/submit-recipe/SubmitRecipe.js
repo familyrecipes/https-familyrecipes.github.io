@@ -67,7 +67,7 @@ class SubmitRecipe extends Component {
 
         return /*html*/ `
             <div id="container">
-                <form>
+                <form id="form">
                     <div>
                         <label>Recipe Title: <input id="title-input" required name="recipe-title" placeholder="Recipe Title..."></label>
                     </div>

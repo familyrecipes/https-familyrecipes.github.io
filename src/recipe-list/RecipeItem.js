@@ -22,6 +22,7 @@ class RecipeItem extends Component {
                     userFavoriteRef.set({
                         key: recipe.key,
                         recipeTitle: recipe.recipeTitle,
+                        cookbookTag: recipe.cookbookTag,
                         imageURL: image
                     });
                 }

@@ -83,7 +83,7 @@ class SubmitRecipe extends Component {
                     <div>
                         <select required id="meal-type" name="meal-type">Meal Type
                         <option disabled selected value> select meal type here </option>
-                            <option id="breakfast" value="Breakfast">Breakfast</option>
+                            <option required id="breakfast" value="Breakfast">Breakfast</option>
                             <option id="lunch" value="Lunch">Lunch</option>
                             <option id="dinner" value="Dinner">Dinner</option>
                             <option id="dessert" value="Dessert">Dessert</option>

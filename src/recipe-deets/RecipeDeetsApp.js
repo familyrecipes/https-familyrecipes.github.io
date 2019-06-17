@@ -24,16 +24,17 @@ class RecipeDeetsApp extends Component {
                 const mappedRecipes = usersRecipes.map(userRecipes => {
                     return Object.values(userRecipes);
                 });
+
                 let allRecipes = [];
                 mappedRecipes.forEach(recipes => {
                     allRecipes = allRecipes.concat(recipes);
                 });
+
                 const oneTrueRecipe = allRecipes.filter(recipe => {
                     return recipe.key.includes(URLParams.key);
-            
                 });
+
                 recipeDeets.update({ recipe: oneTrueRecipe[0] });
-            
             });
 
         const recipeDeets = new RecipeDeets({ recipeRef, key: URLParams.key });

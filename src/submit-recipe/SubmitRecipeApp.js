@@ -8,7 +8,6 @@ class SubmitRecipeApp extends Component {
     
     render() {
         const dom = this.renderDOM();
-        
         const main = dom.querySelector('main');
 
         const header = new Header();

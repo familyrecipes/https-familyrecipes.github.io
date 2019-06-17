@@ -11,6 +11,7 @@ class Profile extends Component {
                 auth.signOut();
             });
         }
+
         return dom;
     }
 
@@ -20,6 +21,7 @@ class Profile extends Component {
         if(!user) {
             return `<div></div>`;
         }
+        
         const avatar = user.photoURL || '../../assets/default-avatar.png';
         return /*html*/ `
             <div class="profile">

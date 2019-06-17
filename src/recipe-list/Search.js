@@ -10,8 +10,7 @@ class Search extends Component {
             event.preventDefault();
             const searchParams = new URLSearchParams();
             searchParams.set('search', input.value.toLowerCase());
-            window.location.hash = searchParams.toString();
-            
+            window.location.hash = searchParams.toString();    
         });
 
         function setInputFromHash() {

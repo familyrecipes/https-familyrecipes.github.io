@@ -40,9 +40,11 @@ class RecipeListApp extends Component {
                 const mappedRecipes = usersRecipes.map(userRecipes => {
                     return Object.values(userRecipes);
                 });
+
                 mappedRecipes.forEach(recipes => {
                     allRecipes = allRecipes.concat(recipes);
                 });
+                
                 recipeList.update({ recipes: allRecipes });
             });
         

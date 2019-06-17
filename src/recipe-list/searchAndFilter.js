@@ -4,9 +4,11 @@ function searchAndFilter(search, filter, allRecipes) {
         const filterByDiet = allRecipes.filter(recipe => {
             return recipe.dietType.includes(filter[0]); 
         });
+
         const filtered = filterByDiet.filter(recipe => {
             return recipe.mealType.includes(filter[1]);
         });
+
         return filtered;
     } 
     
@@ -15,6 +17,7 @@ function searchAndFilter(search, filter, allRecipes) {
             return recipe.recipeTitle.toLowerCase().includes(search) ||
             recipe.cookbookTag.toLowerCase().includes(search);
         });
+
         return searchArray;
     }
     
@@ -23,12 +26,15 @@ function searchAndFilter(search, filter, allRecipes) {
             return recipe.recipeTitle.toLowerCase().includes(search) ||
             recipe.cookbookTag.toLowerCase().includes(search);
         });
+
         const filterByDiet = searchArray.filter(recipe => {
             return recipe.dietType.includes(filter[0]);
         });
+
         const filtered = filterByDiet.filter(recipe => {
             return recipe.mealType.includes(filter[1]);
         });
+        
         return filtered;
     }
 }

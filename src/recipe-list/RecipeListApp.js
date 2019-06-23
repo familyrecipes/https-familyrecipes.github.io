@@ -16,6 +16,7 @@ class RecipeListApp extends Component {
         dom.insertBefore(header.render(), main);
         
         let allRecipes = [];
+        // Nice! way to cache the terms between calls
         let searchTerm;
         let filterTerm;
         

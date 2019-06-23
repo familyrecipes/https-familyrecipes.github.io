@@ -14,7 +14,8 @@ class SubmitRecipeApp extends Component {
         dom.insertBefore(header.render(), main);
 
         const keyRef = recipesByUserRef.child(auth.currentUser.uid);
-
+        
+        // Isn't keyRef.key same thing as auth.currentUser.uid?
         const submitRecipe = new SubmitRecipe({ key: keyRef.key });
         main.appendChild(submitRecipe.render());
 

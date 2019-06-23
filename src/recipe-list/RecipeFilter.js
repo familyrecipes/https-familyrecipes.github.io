@@ -11,6 +11,11 @@ class RecipeFilter extends Component {
         form.addEventListener('input', () => {
             const dietFilterValue = form.elements['diet-type-filter'].value;
             const mealFilterValue = form.elements['meal-type-filter'].value;
+            // Better to use key/value pairs as [0] and [1] are cryptic:
+            // const filters = {
+            //     diet: dietFilterValue,
+            //     meal: mealFilterValue
+            // };
             let filters = ['', ''];
             filters[0] = dietFilterValue; 
             filters[1] = mealFilterValue;

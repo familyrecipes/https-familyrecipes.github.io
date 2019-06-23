@@ -1,6 +1,31 @@
 import Component from '../Component.js';
 import { auth, recipesByUserRef, imageStorageRef } from '../services/firebase.js';
 
+// not a bad idea to clean up lists:
+function toList(items) {
+    return items
+        // split the string to an array on linebreak:
+        .split('\r\n')
+        // remove whitespace from beginning and end
+        .map(text => text.trim())
+        // remove empty list items
+        .filter(text => text !== '');
+}
+
+// easier to put these here and use template strings
+const INGREDIENTS_PLACEHOLDER = `
+2 cups of flour
+1/2 cup of sugar
+2 eggs
+etc...`;
+        
+const INSTRUCTIONS_PLACEHOLDER = `
+Add flour and sugar to a large mixing bowl
+Thoroughly mix together
+Add eggs and whisk until desired consistency
+etc...`;
+
+
 class SubmitRecipe extends Component {
 
     render() {
@@ -8,6 +33,8 @@ class SubmitRecipe extends Component {
         const submitForm = form.querySelector('form');
 
         const submitButton = form.querySelector('#submit-button');
+        // This is the user's id under "recipes-by-user", not the recipe.
+        // Instead of passing in, you could just use auth.currentUser.uid
         const recipeKey = recipesByUserRef.child(this.props.key);
         
         submitButton.addEventListener('click', event => {
@@ -15,8 +42,8 @@ class SubmitRecipe extends Component {
             const formData = new FormData(submitForm);
             const file = formData.get('image');
             const recipeRef = recipeKey.push();
-            const ingredients = formData.get('ingredients').split('\r\n');
-            const instructions = formData.get('instructions').split('\r\n');
+            const ingredients = toList(formData.get('ingredients'));
+            const instructions = toList(formData.get('instructions'));
 
             if(file.size === 0) {
                 saveRecipe();
@@ -53,7 +80,6 @@ class SubmitRecipe extends Component {
 
                 recipeRef.set(newRecipe).then(() => {
                     submitForm.reset();
-                
                 });
             }
         });
@@ -62,14 +88,19 @@ class SubmitRecipe extends Component {
     }
 
     renderTemplate() {
-        const ingredientPlaceholder = '2 cups of flour\n1/2 cup of sugar\n2 eggs\nect...';
-        const instructionsPlaceholder = 'Add flour and sugar to a large mixing bowl\nThouroughly mix together\nAdd eggs and whisk until disired consistancy\nEct...';
+        // These can live as constants at top of module
+        // const ingredientPlaceholder = '2 cups of flour\n1/2 cup of sugar\n2 eggs\nect...';
+        // const instructionsPlaceholder = 'Add flour and sugar to a large mixing bowl\nThouroughly mix together\nAdd eggs and whisk until disired consistancy\nEct...';
 
         return /*html*/ `
             <div id="container">
                 <form id="form">
                     <div>
-                        <label>Recipe Title: <input id="title-input" required name="recipe-title" placeholder="Recipe Title..."></label>
+                        <!--Try and be more horizontal instead of long lines-->
+                        <label>
+                            Recipe Title: 
+                            <input id="title-input" required name="recipe-title" placeholder="Recipe Title...">
+                        </label>
                     </div>
 
                     <div>
@@ -105,11 +136,11 @@ class SubmitRecipe extends Component {
                     </div>
                     <div>
                         <p class="howto" for="ingredients">Ingredients: Type an ingredient then press enter (make sure each ingredient is on a new line! Without blank lines.).</p>
-                        <textarea id="ingredients" required name="ingredients" placeholder="${ingredientPlaceholder}"></textarea>
+                        <textarea id="ingredients" required name="ingredients" placeholder="${INGREDIENTS_PLACEHOLDER}"></textarea>
                     </div>
                     <div>
                         <p class="howto" for="instructions">Instructions: Write a step then press enter (make sure each step starts on a new line! Without blank lines).</p>
-                        <textarea id="instructions" required name="instructions" placeholder="${instructionsPlaceholder}"></textarea>
+                        <textarea id="instructions" required name="instructions" placeholder="${INSTRUCTIONS_PLACEHOLDER}"></textarea>
                     </div>
                     
                     <div>
